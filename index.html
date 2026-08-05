@@ -1,11 +1,584 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>MY Yang Lab at DGIST</title>
-  </head>
-  <body>
-    <h1>MY Yang Lab at DGIST</h1>
-    <p>Multiscale Simulation & AI for Energy, Catalysis, and Biomolecular Systems</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MY Yang Lab at DGIST</title>
+
+  <style>
+    :root {
+      --navy: #0b1f3a;
+      --deep-blue: #0f4c81;
+      --soft-blue: #eaf4fb;
+      --pale-blue: #f6fbff;
+      --teal: #2aa7a5;
+      --text: #1f2933;
+      --muted: #5f6f82;
+      --line: #d9e6ef;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Arial, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 18px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--navy);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--deep-blue);
+    }
+
+    .hero {
+      min-height: 82vh;
+      background:
+        radial-gradient(circle at 85% 20%, rgba(42, 167, 165, 0.16), transparent 28%),
+        radial-gradient(circle at 75% 75%, rgba(15, 76, 129, 0.12), transparent 32%),
+        linear-gradient(120deg, #ffffff 0%, #f4faff 100%);
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      align-items: center;
+      gap: 48px;
+      padding: 92px 7vw 84px;
+    }
+
+    .eyebrow {
+      color: var(--deep-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(42px, 5.5vw, 76px);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+
+    .subtitle {
+      margin-top: 26px;
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 1.18rem;
+    }
+
+    .buttons {
+      margin-top: 34px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 999px;
+      font-weight: 650;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--navy);
+      color: var(--white);
+      box-shadow: 0 10px 24px rgba(11, 31, 58, 0.18);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: var(--deep-blue);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--deep-blue);
+      color: var(--deep-blue);
+      background: rgba(255, 255, 255, 0.65);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-2px);
+      background: var(--soft-blue);
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 420px;
+      border-radius: 34px;
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.84), rgba(234,244,251,0.74)),
+        radial-gradient(circle at 30% 35%, rgba(42,167,165,0.2), transparent 28%),
+        radial-gradient(circle at 70% 70%, rgba(15,76,129,0.18), transparent 30%);
+      box-shadow: 0 24px 70px rgba(11, 31, 58, 0.14);
+      overflow: hidden;
+      border: 1px solid rgba(217, 230, 239, 0.8);
+    }
+
+    .molecule {
+      position: absolute;
+      inset: 0;
+      opacity: 0.95;
+    }
+
+    .node {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--deep-blue);
+      box-shadow: 0 0 0 8px rgba(15, 76, 129, 0.08);
+    }
+
+    .node.teal {
+      background: var(--teal);
+      box-shadow: 0 0 0 8px rgba(42, 167, 165, 0.1);
+    }
+
+    .bond {
+      position: absolute;
+      height: 2px;
+      background: linear-gradient(90deg, rgba(15,76,129,0.35), rgba(42,167,165,0.35));
+      transform-origin: left center;
+    }
+
+    .b1 { width: 145px; left: 122px; top: 132px; transform: rotate(24deg); }
+    .b2 { width: 170px; left: 245px; top: 190px; transform: rotate(-28deg); }
+    .b3 { width: 135px; left: 330px; top: 112px; transform: rotate(55deg); }
+    .b4 { width: 185px; left: 166px; top: 270px; transform: rotate(-12deg); }
+    .b5 { width: 130px; left: 344px; top: 282px; transform: rotate(32deg); }
+
+    .n1 { left: 110px; top: 122px; }
+    .n2 { left: 252px; top: 180px; }
+    .n3 { left: 402px; top: 102px; }
+    .n4 { left: 332px; top: 270px; }
+    .n5 { left: 498px; top: 356px; }
+    .n6 { left: 156px; top: 260px; }
+
+    .visual-label {
+      position: absolute;
+      left: 32px;
+      bottom: 30px;
+      right: 32px;
+      background: rgba(255,255,255,0.78);
+      border: 1px solid rgba(217, 230, 239, 0.9);
+      border-radius: 20px;
+      padding: 20px;
+      backdrop-filter: blur(8px);
+    }
+
+    .visual-label strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.02rem;
+      margin-bottom: 4px;
+    }
+
+    .visual-label span {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    section {
+      padding: 84px 7vw;
+    }
+
+    .section-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--navy);
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.15;
+      margin: 0 0 14px;
+      letter-spacing: -0.025em;
+    }
+
+    .section-lead {
+      color: var(--muted);
+      max-width: 760px;
+      font-size: 1.07rem;
+      margin-bottom: 36px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 26px;
+      box-shadow: 0 14px 40px rgba(11, 31, 58, 0.06);
+      min-height: 220px;
+    }
+
+    .card-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: var(--soft-blue);
+      color: var(--deep-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      color: var(--navy);
+      margin: 0 0 10px;
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      margin: 0;
+      font-size: 0.96rem;
+    }
+
+    .alt {
+      background: var(--pale-blue);
+    }
+
+    .publications {
+      display: grid;
+      gap: 16px;
+    }
+
+    .pub {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 22px 24px;
+    }
+
+    .pub-title {
+      color: var(--navy);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .pub-meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .join-box {
+      background: linear-gradient(135deg, var(--navy), var(--deep-blue));
+      color: var(--white);
+      border-radius: 30px;
+      padding: 44px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 30px;
+      align-items: center;
+      box-shadow: 0 22px 60px rgba(11, 31, 58, 0.2);
+    }
+
+    .join-box h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(30px, 4vw, 46px);
+      margin: 0 0 12px;
+    }
+
+    .join-box p {
+      margin: 0;
+      color: rgba(255,255,255,0.82);
+      max-width: 720px;
+    }
+
+    .join-box .btn-secondary {
+      background: white;
+      border: none;
+      color: var(--navy);
+      white-space: nowrap;
+    }
+
+    footer {
+      padding: 36px 7vw;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 64px;
+      }
+
+      .hero-visual {
+        min-height: 340px;
+      }
+
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .join-box {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 64px 6vw;
+      }
+
+      .hero {
+        padding-left: 6vw;
+        padding-right: 6vw;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="#">MY Yang Lab</a>
+      <div class="nav-links">
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#people">People</a>
+        <a href="#join">Join Us</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">MY Yang Lab at DGIST</div>
+        <h1>Molecular Simulation & AI for Complex Molecular Systems</h1>
+        <p class="subtitle">
+          We develop computational and AI-driven approaches to understand and design molecular systems
+          across energy, catalysis, and biomolecular science.
+        </p>
+        <div class="buttons">
+          <a class="btn-primary" href="#research">Explore Research</a>
+          <a class="btn-secondary" href="#join">Join Us</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Abstract molecular simulation graphic">
+        <div class="molecule">
+          <div class="bond b1"></div>
+          <div class="bond b2"></div>
+          <div class="bond b3"></div>
+          <div class="bond b4"></div>
+          <div class="bond b5"></div>
+
+          <div class="node n1"></div>
+          <div class="node n2 teal"></div>
+          <div class="node n3"></div>
+          <div class="node n4 teal"></div>
+          <div class="node n5"></div>
+          <div class="node n6"></div>
+        </div>
+
+        <div class="visual-label">
+          <strong>Simulation × Quantum Chemistry × AI</strong>
+          <span>Designing molecular systems from electronic structure to functional materials.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="section-inner">
+        <h2 class="section-title">Research Directions</h2>
+        <p class="section-lead">
+          Our group combines quantum chemistry, molecular dynamics, multiscale modeling, and machine learning
+          to study molecular mechanisms and design principles in complex chemical systems.
+        </p>
+
+        <div class="cards">
+          <div class="card">
+            <div class="card-icon">AI</div>
+            <h3>AI for Molecular Science</h3>
+            <p>
+              Integrating molecular simulation, data-driven modeling, and machine learning for molecular discovery.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">MD</div>
+            <h3>Multiscale Simulation</h3>
+            <p>
+              Connecting electronic structure, atomistic dynamics, and mesoscale behavior in complex systems.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">EN</div>
+            <h3>Energy & Catalysis</h3>
+            <p>
+              Understanding reaction mechanisms, interfaces, and molecular design principles for energy applications.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">BIO</div>
+            <h3>Biomolecular Systems</h3>
+            <p>
+              Modeling receptors, proteins, and bio-inspired molecular systems to understand structure-function relationships.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" class="alt">
+      <div class="section-inner">
+        <h2 class="section-title">Selected Publications</h2>
+        <p class="section-lead">
+          Representative publications will be listed here. A complete list will be linked to Google Scholar.
+        </p>
+
+        <div class="publications">
+          <div class="pub">
+            <div class="pub-title">Selected publication title will appear here</div>
+            <div class="pub-meta">Authors. Journal, Year. DOI / PDF / Code</div>
+          </div>
+
+          <div class="pub">
+            <div class="pub-title">Selected publication title will appear here</div>
+            <div class="pub-meta">Authors. Journal, Year. DOI / PDF / Code</div>
+          </div>
+
+          <div class="pub">
+            <div class="pub-title">Selected publication title will appear here</div>
+            <div class="pub-meta">Authors. Journal, Year. DOI / PDF / Code</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="people">
+      <div class="section-inner">
+        <h2 class="section-title">People</h2>
+        <p class="section-lead">
+          MY Yang Lab is opening at DGIST. We welcome motivated students and researchers interested in
+          molecular simulation, quantum chemistry, AI for science, catalysis, and energy materials.
+        </p>
+
+        <div class="cards">
+          <div class="card">
+            <div class="card-icon">PI</div>
+            <h3>Moon Young Yang</h3>
+            <p>
+              Principal Investigator<br />
+              Assistant Professor, DGIST<br />
+              Molecular simulation / AI / Catalysis
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="join">
+      <div class="section-inner">
+        <div class="join-box">
+          <div>
+            <h2>Join Us</h2>
+            <p>
+              We are recruiting graduate students, undergraduate researchers, and postdoctoral researchers
+              interested in computational molecular science and AI-driven molecular design.
+            </p>
+          </div>
+          <a class="btn-secondary" href="mailto:your.email@dgist.ac.kr">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="alt">
+      <div class="section-inner">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-lead">
+          MY Yang Lab<br />
+          Daegu Gyeongbuk Institute of Science and Technology, DGIST<br />
+          Daegu, Republic of Korea<br /><br />
+          Email: TBD
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© 2026 MY Yang Lab at DGIST</div>
+      <div>Built with GitHub Pages</div>
+    </div>
+  </footer>
+</body>
 </html>
