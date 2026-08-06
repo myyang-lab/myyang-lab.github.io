@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publications | MY Yang Lab at DGIST</title>
+
+  <style>
+    :root {
+      --navy: #0b1f3a;
+      --deep-blue: #0f4c81;
+      --soft-blue: #eaf4fb;
+      --pale-blue: #f6fbff;
+      --teal: #2aa7a5;
+      --text: #1f2933;
+      --muted: #5f6f82;
+      --line: #d9e6ef;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Arial, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 18px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo { font-weight: 700; letter-spacing: 0.02em; color: var(--navy); }
+    .nav-links { display: flex; gap: 22px; font-size: 0.95rem; color: var(--muted); }
+    .nav-links a:hover, .nav-links a.active { color: var(--deep-blue); }
+
+    .page-header {
+      padding: 72px 7vw 36px;
+      background: linear-gradient(120deg, #ffffff 0%, #f6fbff 100%);
+      border-bottom: 1px solid var(--line);
+    }
+    .page-inner { max-width: 1180px; margin: 0 auto; }
+    .eyebrow {
+      color: var(--deep-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+    h1 {
+      margin: 0;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(40px, 5vw, 68px);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+    .top-actions {
+      margin-top: 26px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      padding: 11px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--deep-blue);
+      color: var(--deep-blue);
+      background: rgba(255, 255, 255, 0.7);
+      font-weight: 650;
+      transition: 0.2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); background: var(--soft-blue); }
+    .legend { color: var(--muted); font-size: 0.94rem; }
+    .legend sup { color: var(--deep-blue); font-weight: 800; }
+
+    main { padding: 48px 7vw 84px; }
+    .content { max-width: 1180px; margin: 0 auto; }
+    .year-block { margin-top: 46px; }
+    .year-block:first-child { margin-top: 0; }
+    .year-title {
+      color: var(--navy);
+      font-size: 1.55rem;
+      margin: 0 0 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+    .pub-list { display: grid; gap: 14px; }
+    .pub {
+      display: grid;
+      grid-template-columns: 58px 1fr;
+      gap: 14px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 20px 22px;
+      box-shadow: 0 10px 30px rgba(11, 31, 58, 0.04);
+    }
+    .pub-number { color: var(--deep-blue); font-weight: 800; padding-top: 2px; }
+    .pub-title { color: var(--navy); font-weight: 800; font-size: 1.04rem; margin-bottom: 7px; }
+    .title-link { color: var(--navy); text-decoration: none; }
+    .title-link:hover { color: var(--deep-blue); text-decoration: underline; text-underline-offset: 3px; }
+    .pub-authors { color: var(--text); margin-bottom: 5px; }
+    .pub-authors strong { color: var(--navy); }
+    .pub-authors sup { color: var(--deep-blue); font-weight: 800; }
+    .pub-meta { color: var(--muted); font-size: 0.96rem; margin-bottom: 10px; }
+    .pub-note { color: var(--muted); font-size: 0.9rem; margin-bottom: 10px; }
+    .pub-links { display: flex; gap: 9px; flex-wrap: wrap; }
+    .pub-links a {
+      display: inline-block;
+      padding: 6px 11px;
+      border-radius: 999px;
+      background: var(--soft-blue);
+      color: var(--deep-blue);
+      font-weight: 700;
+      font-size: 0.84rem;
+    }
+    .pub-links a:hover { background: #dceff8; }
+
+    footer {
+      padding: 38px 7vw;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.94rem;
+      background: white;
+    }
+    .footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+    .footer-title { color: var(--navy); font-weight: 800; margin-bottom: 8px; }
+    .footer-links { display: flex; gap: 16px; flex-wrap: wrap; justify-content: flex-end; }
+    .footer-links a { color: var(--muted); }
+    .footer-links a:hover { color: var(--deep-blue); }
+    .footer-bottom {
+      max-width: 1180px;
+      margin: 24px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      color: #7a8795;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 980px) {
+      .nav-inner { flex-direction: column; gap: 12px; }
+      .nav-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .footer-links { justify-content: flex-start; }
+    }
+    @media (max-width: 640px) {
+      .page-header { padding: 54px 6vw 30px; }
+      main { padding: 36px 6vw 64px; }
+      .pub { grid-template-columns: 1fr; gap: 6px; padding: 18px; }
+      .pub-number { padding-top: 0; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="index.html">MY Yang Lab</a>
+      <div class="nav-links">
+        <a href="research.html">Research</a>
+        <a class="active" href="publications.html">Publications</a>
+        <a href="people.html">People</a>
+        <a href="news.html">News</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="join.html">Join Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="page-inner">
+      <div class="eyebrow">Publications</div>
+      <h1>Publications</h1>
+      <div class="top-actions">
+        <a class="btn" href="https://scholar.google.com/citations?user=xMAl_QYAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <div class="legend"><sup>†</sup> Equal contribution &nbsp;&nbsp; <sup>*</sup> Corresponding author</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="content">
+      <section class="year-block">
+        <h2 class="year-title">2026</h2>
+        <div class="pub-list">
+<article class="pub">
+  <div class="pub-number">(61)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1021/acs.inorgchem.6c01698" target="_blank" rel="noopener">Cobalt(III)-Schiff Base Coordination to Nsp1, a SARS-CoV-2 protein</a></div>
+    <div class="pub-authors">Maryann Morales, <strong>Moon Young Yang</strong>, William A. Goddard III<sup>*</sup>, Harry B. Gray<sup>*</sup>, Jay R. Winkler<sup>*</sup></div>
+    <div class="pub-meta"><em>Inorg. Chem.</em>, 2026.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(60)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1007/s00044-026-03579-6" target="_blank" rel="noopener">Understanding Biased Signaling and Small-Molecule Binding for treatment of type 2 diabetes mellitus and obesity at the Glucagon-Like Peptide-1 Receptor (GLP-1R) based on Molecular Dynamics Simulations</a></div>
+    <div class="pub-authors">Jack Brubaker, Soo-Kyung Kim, Bo Li, <strong>Moon Young Yang</strong>, William A. Goddard III<sup>*</sup></div>
+    <div class="pub-meta"><em>Med. Chem. Res.</em>, 2026.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(59)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1021/acs.jpclett.5c03868" target="_blank" rel="noopener">Stochasticity of Solvent Dynamics: Why Dipoles Emerge Where No Dipoles Are Expected?</a></div>
+    <div class="pub-authors"><strong>Moon Young Yang</strong><sup>†</sup>, Omar O&#x27;Mari<sup>†</sup>, William A. Goddard III<sup>*</sup>, Valentine I. Vullev<sup>*</sup></div>
+    <div class="pub-meta"><em>J. Phys. Chem. Lett.</em>, 2026, 17(5):1361-1369.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(58)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1002/smll.202508098" target="_blank" rel="noopener">Mechanistic Transformation of CuI Nanoparticles into Oxidation-Resistant 2D Copper Nanoplates</a></div>
+    <div class="pub-authors">Hyeuk Jin Han<sup>†</sup>, <strong>Moon Young Yang</strong><sup>†</sup>, Changsoo Lee<sup>†</sup>, Gangtae Jin, James L. Hart, Rabecca Mutheu, Hyung Il Lee, Seo Hyun Kim, Hanhwi Jang, Minjoon Kim, Yeon Sik Jung, William A. Goddard III<sup>*</sup>, Judy J. Cha<sup>*</sup>, Chungseok Choi<sup>*</sup></div>
+    <div class="pub-meta"><em>Small</em>, 2026, 22:e08098.</div>
+    
+  </div>
+</article>
+        </div>
+      </section>
+
+      <section class="year-block">
+        <h2 class="year-title">2025</h2>
+        <div class="pub-list">
+<article class="pub">
+  <div class="pub-number">(57)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1021/acsnano.5c17793" target="_blank" rel="noopener">Accelerating Polysulfide Redox Kinetics via the Metal-Insulator Interface in a Binder-Free Separator for Long-Life Lithium-Sulfur Batteries</a></div>
+    <div class="pub-authors">Jin Luo, <strong>Moon Young Yang</strong>, Yuhe Mu, Zhongjiu Yang, Boris V Merinov, William A Goddard III<sup>*</sup>, Yue Zhou<sup>*</sup></div>
+    <div class="pub-meta"><em>ACS Nano</em>, 2025, 19:42951-42963.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(56)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1039/D5TA03973H" target="_blank" rel="noopener">Atomistic characterization of hydration-dependent fuel cell ionomer nanostructure: validation by vibrational spectroscopy</a></div>
+    <div class="pub-authors">Dan J. Donnelly III<sup>†</sup>, <strong>Moon Young Yang</strong><sup>†</sup>, Nicholas Dimakis<sup>*</sup>, Seung Soon Jang, William A. Goddard III<sup>*</sup>, Eugene S. Smotkin<sup>*</sup></div>
+    <div class="pub-meta"><em>J. Mater. Chem. A</em>, 2025, 13:24495-24510.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(55)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1039/D4MH01324G" target="_blank" rel="noopener">An atomically precise alloy AgCu cuboid nanocluster with a cubic core: gram scale synthesis, total structure, electronic structure, and catalytic performance</a></div>
+    <div class="pub-authors">Abhijit Nag, Abdul Mannan Butt, <strong>Moon Young Yang</strong>, Bilal Masood Pirzada, Mohamed Infas, Praveen B. Managutti, Sharmarke Mohamed, Ahmed L. Abdelhady, Mohamed Abu Haija, Boris V. Merinov, William A. Goddard III, Ahsanulhaq Qurashi<sup>*</sup></div>
+    <div class="pub-meta"><em>Mater. Horiz.</em>, 2025, 12:5252-5258.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(54)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1021/acscentsci.5c00043" target="_blank" rel="noopener">Combustion Resistant Borohydrides and their Chemical Interactions with Li-Metal Surfaces: An Experimental and Theoretical Study</a></div>
+    <div class="pub-authors">Anton Tomich, Stephen Proctor, <strong>Moon Young Yang</strong>, Jianjun Chen, Yifan Zhao, Edward Chen, Tridip Das, Boris Merinov, Juchen Guo<sup>*</sup>, William Goddard III<sup>*</sup>, Vincent Lavallo<sup>*</sup></div>
+    <div class="pub-meta"><em>ACS Cent. Sci.</em>, 2025, 11:734-741.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(53)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1016/j.jpowsour.2025.237212" target="_blank" rel="noopener">Structure and Ion Diffusion of Hexagonal Li5(PS4)Cl2 Superionic Conductor from Molecular Dynamics Simulations</a></div>
+    <div class="pub-authors">Tridip Das, Boris V. Merinov<sup>*</sup>, <strong>Moon Young Yang</strong>, William A. Goddard III<sup>*</sup></div>
+    <div class="pub-meta"><em>J. Power Sources</em>, 2025, 646:237212.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(52)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1016/j.checat.2025.101338" target="_blank" rel="noopener">Cooperative Effects Associated with High Electrolyte Concentrations in Driving the Conversion of CO2 to C2H4 on Copper</a></div>
+    <div class="pub-authors">Shaoyang Lin<sup>†</sup>, Yuval Fishler<sup>†</sup>, Soonho Kwon<sup>†</sup>, Annette Böhme, Weixuan Nie, <strong>Moon Young Yang</strong>, Jesse Matthews, Zachery W. B. Iton, Brian C. Lee, Thomas Jaramillo, Harry A. Atwater, William A. Goddard III<sup>*</sup>, Wilson A. Smith<sup>*</sup>, Kimberly A. See<sup>*</sup></div>
+    <div class="pub-meta"><em>Chem. Catal.</em>, 2025, 5:101338.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(51)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1021/jacs.4c14672" target="_blank" rel="noopener">Metabotropic GABAB Receptor Activation Induced by G Protein Coupling</a></div>
+    <div class="pub-authors"><strong>Moon Young Yang</strong>, Soo-Kyung Kim, William A. Goddard III<sup>*</sup></div>
+    <div class="pub-meta"><em>J. Am. Chem. Soc.</em>, 2025, 147:1911-1919.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(50)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1021/acsmaterialslett.4c02148" target="_blank" rel="noopener">Polymorphism of [Cu15(PET)13(TPP)6][BF4]2 and Double-Helical Assembly of [Cu18H(PET)14(TPP)6Cl3]: A Study of Chiral Nanoclusters Triple-Helical Core from the Reaction Intermediate</a></div>
+    <div class="pub-authors">Abhijit Nag, Abdul Mannan Butt, <strong>Moon Young Yang</strong>, Bilal Masood Pirzada, Mohamed Infas, Praveen B. Managutti, Sharmarke Mohamed, Ahmed L. Abdelhady, Mohamed Abu Haija, Boris V. Merinov, William A. Goddard III<sup>*</sup>, Ahsanulhaq Qurashi<sup>*</sup></div>
+    <div class="pub-meta"><em>ACS Mater. Lett.</em>, 2025, 7:442-449.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(49)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1038/s41586-024-08266-3" target="_blank" rel="noopener">Dynamic supramolecular snub cubes</a></div>
+    <div class="pub-authors">Huang Wu<sup>*</sup>, Yu Wang<sup>*</sup>, Luka Đorđević, Pramita Kundu, Surojit Bhunia, Aspen X.-Y. Chen, Liang Feng, Dengke Shen, Wenqi Liu, Long Zhang, Bo Song, Guangcheng Wu, Bai-Tong Liu, <strong>Moon Young Yang</strong>, Yong Yang, Charlotte Stern, Samuel Stupp, William A. Goddard III, Wenping Hu<sup>*</sup>, Fraser Stoddart<sup>*</sup></div>
+    <div class="pub-meta"><em>Nature</em>, 2025, 637:347- 353.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(48)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1021/acs.jpcb.4c04103" target="_blank" rel="noopener">How Rigid are Anthranilamide Molecular Electrets?</a></div>
+    <div class="pub-authors">Omar O&#x27;Mari<sup>†</sup>, <strong>Moon Young Yang</strong><sup>†</sup>, William A. Goddard III<sup>*</sup>, Valentine I. Vullev<sup>*</sup></div>
+    <div class="pub-meta"><em>J. Phys. Chem. B</em>, 2025, 129(6):1750-1759.</div>
+    <div class="pub-note">Selected as the front cover</div>
+  </div>
+</article>
+        </div>
+      </section>
+
+      <section class="year-block">
+        <h2 class="year-title">2024</h2>
+        <div class="pub-list">
+<article class="pub">
+  <div class="pub-number">(47)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1073/pnas.2409987121" target="_blank" rel="noopener">Agonist activation to open the G? subunit of the GPCR-G protein precoupled complex defines functional agonist activation of TAS2R5</a></div>
+    <div class="pub-authors"><strong>Moon Young Yang</strong><sup>†</sup>, Khuong Duy Mac<sup>†</sup>, Hannah R. Strzelinski, Samantha A. Hoffman, Donghwa Kim, Soo-Kyung Kim, Judith Su<sup>*</sup>, Stephen B. Liggett<sup>*</sup>, William A. Goddard III<sup>*</sup></div>
+    <div class="pub-meta"><em>Proc. Natl. Acad. Sci. U. S. A.</em>, 2024, 131(48):e2409987121.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(46)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1021/jacs.4c08128" target="_blank" rel="noopener">The G Protein-First Mechanism for Activation of the Class B Glucagon-Like Peptide 1 Receptor Coupled to N-Terminal Domain-Mediated Conformational Progression</a></div>
+    <div class="pub-authors">Bo Li, <strong>Moon Young Yang</strong>, Soo-Kyung Kim, William A. Goddard III<sup>*</sup></div>
+    <div class="pub-meta"><em>J. Am. Chem. Soc.</em>, 2024, 146(38):26251-26260.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(45)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1021/acs.jpcb.4c00053" target="_blank" rel="noopener">A Molecular Dynamics Investigation into CerENP&#x27;s Effect on the Lipid Matrix of Stratum Corneum</a></div>
+    <div class="pub-authors"><strong>Moon Young Yang</strong>, Eunok Lee, Chang-Seo Park, Yoon Sung Nam<sup>*</sup></div>
+    <div class="pub-meta"><em>J. Phys. Chem. B</em>, 2024, 128:5378-5386.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(44)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1038/s41467-024-47521-z" target="_blank" rel="noopener">Manipulating the Diffusion Energy Barrier at the Lithium Metal Electrolyte Interface for Dendrite-free Long-life Batteries</a></div>
+    <div class="pub-authors">Jyotshna Pokharel, Arthur Cresce, Bharat Pant, <strong>Moon Young Yang</strong>, Ashim Gurung, Wei He, Abiral Baniya, Buddhi Sagar Lamsal, Zhongjiu Yang, Stephen Gent, Ye Cao<sup>*</sup>, William A. Goddard III<sup>*</sup>, Kang Xu<sup>*</sup>, Yue Zhou<sup>*</sup></div>
+    <div class="pub-meta"><em>Nat. Commun.</em>, 2024, 15:3085.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(43)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1073/pnas.2402653121" target="_blank" rel="noopener">Copper(II) Coordination to the Intrinsically Disordered Region of SARS-CoV-2 Nsp1</a></div>
+    <div class="pub-authors">Maryann Morales<sup>†</sup>, <strong>Moon Young Yang</strong><sup>†</sup>, William A. Goddard III<sup>*</sup>, Harry B. Gray<sup>*</sup>, Jay R. Winkler<sup>*</sup></div>
+    <div class="pub-meta"><em>Proc. Natl. Acad. Sci. U. S. A.</em>, 2024, 121(20):e2402653121.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(42)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1021/acs.jpclett.4c00101" target="_blank" rel="noopener">Molecular Dynamics Studies of Atomistically Determined Fibrillar Assemblies: Comparison of the Rippled ?-Sheet, Pleated ?-Sheet, and Herringbone Structures</a></div>
+    <div class="pub-authors">Hyeonju Lee, <strong>Moon Young Yang</strong>, Jevgenij Raskatov, Hyungjun Kim, William A. Goddard III<sup>*</sup></div>
+    <div class="pub-meta"><em>J. Phys. Chem. Lett.</em>, 2024, 15:4568-4574.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(41)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1021/jacs.3c10525" target="_blank" rel="noopener">How Permanent are the Permanent Macrodipoles of Anthranilamide Bioinspired Molecular Electrets?</a></div>
+    <div class="pub-authors"><strong>Moon Young Yang</strong><sup>†</sup>, Omar O&#x27;Mari<sup>†</sup>, William A. Goddard III<sup>*</sup>, Valentine I. Vullev<sup>*</sup></div>
+    <div class="pub-meta"><em>J. Am. Chem. Soc.</em>, 2024, 146(8):5162-5172.</div>
+    <div class="pub-note">Selected as the front cover</div>
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(40)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1002/aenm.202303047" target="_blank" rel="noopener">The Zn deposition mechanism and pressure effects for aqueous Zn batteries: A combined theoretical and experimental study</a></div>
+    <div class="pub-authors">Yuyin Li, Charles B. Musgrave, <strong>Moon Young Yang</strong>, Minho M. Kim, Kenang Zhang, Mohsen Tamtaji, Yuting Cai, Tsz Wing Tang, Jun Wang, Bin Yuan<sup>*</sup>, William A. Goddard<sup>*</sup>, Zhengtang Luo<sup>*</sup></div>
+    <div class="pub-meta"><em>Adv. Energy Mater.</em>, 2024, 14:230347.</div>
+    
+  </div>
+</article>
+        </div>
+      </section>
+
+      <section class="year-block">
+        <h2 class="year-title">2023</h2>
+        <div class="pub-list">
+<article class="pub">
+  <div class="pub-number">(39)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1073/pnas.2300919120" target="_blank" rel="noopener">Fully Activated Structure of the Sterol-Bound Smoothened GPCR-Gi Protein Complex</a></div>
+    <div class="pub-authors">Amy-Doan P. Vo, Soo-Kyung Kim, <strong>Moon Young Yang</strong>, Alison E. Ondrus, William A. Goddard III<sup>*</sup></div>
+    <div class="pub-meta"><em>Proc. Natl. Acad. Sci. U. S. A.</em>, 2023, 120(49):e2300919120.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(38)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1021/acs.jpcc.3c04991" target="_blank" rel="noopener">Understanding Ionic Diffusion Mechanisms in Li2S Coatings for Solid-State Batteries: Development of a Tailored Reactive Force Field for Multiscale Simulations</a></div>
+    <div class="pub-authors">Maddalena D&#x27;Amore<sup>*</sup>, <strong>Moon Young Yang</strong>, Tridip Das, Anna Maria Ferrari, Kim Minho, Mauro Sgroi, Alessandro Fortunelli, William A. Goddard III</div>
+    <div class="pub-meta"><em>J. Phys. Chem. C</em>, 2023, 127:22880-22888.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(37)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1021/jacs.3c05996" target="_blank" rel="noopener">Structure and Molecular Mechanism of Signaling for the Glucagon-like Peptide-1 Receptor Bound to Gs Protein and Exendin-P5 Biased Agonist</a></div>
+    <div class="pub-authors">Bo Li<sup>†</sup>, Krystyna Maruszko<sup>†</sup>, Soo-Kyung Kim<sup>†</sup>, <strong>Moon Young Yang</strong>, Amy-Doan Vo, William A. Goddard III<sup>*</sup></div>
+    <div class="pub-meta"><em>J. Am. Chem. Soc.</em>, 2023, 145:20422-20431.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(36)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1038/s44160-023-00304-8" target="_blank" rel="noopener">Nanocluster Superstructures Assembled via Surface Ligand Switching at High Temperature</a></div>
+    <div class="pub-authors">Grayson Johnson<sup>†</sup>, <strong>Moon Young Yang</strong><sup>†</sup>, Chang Liu<sup>†</sup>, Hua Zhou, Xiaobing Zuo, Diane A. Dickie, Sihan Wang, Wenpei Gao, Bukuru Anaclet, Frédéric A. Perras, Fuyan Ma, Chenjie Zeng, Da Wang, Sara Bals, Sheng Dai, Zhen Xu, Guoliang Liu, William A. Goddard III<sup>*</sup>, Sen Zhang<sup>*</sup></div>
+    <div class="pub-meta"><em>Nat. Synth.</em>, 2023, 2:828-837.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(35)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1021/acs.jmedchem.3c00064" target="_blank" rel="noopener">Discovery and Binding Mechanism of Pyrazoloisoquinoline-Based Novel ?- Arrestin Inverse Agonists of the Kappa-Opioid Receptor</a></div>
+    <div class="pub-authors">Jae-Hoon Jung<sup>†</sup>, In Hee Jang<sup>†</sup>, <strong>Moon Young Yang</strong><sup>†</sup>, Sunhong Kim, Soo-Kyung Kim, William A. Goddard III<sup>*</sup>, Yong-Chul Kim<sup>*</sup></div>
+    <div class="pub-meta"><em>J. Med. Chem.</em>, 2023, 66(7):5154-5170.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(34)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1016/j.xcrp.2023.101326" target="_blank" rel="noopener">Quantum-Mechanics-Based Molecular Dynamics Simulations of the Structure and Performance of Sulfur-Enriched Li3PS4 Cathode</a></div>
+    <div class="pub-authors">Sergey I. Morozov, Boris V. Merinov<sup>*</sup>, Tridip Das, Sergey Zybin, <strong>Moon Young Yang</strong>, William A. Goddard III<sup>*</sup></div>
+    <div class="pub-meta"><em>Cell Rep. Phys. Sci.</em>, 2023, 4:101326.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(33)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1002/aenm.202202949" target="_blank" rel="noopener">Characterization of the Solid Electrolyte Interphase at the Li Metal-Ionic Liquid Interface</a></div>
+    <div class="pub-authors"><strong>Moon Young Yang</strong>, Sergey V. Zybin, Tridip Das, Boris V. Merinov<sup>*</sup>, William A. Goddard III<sup>*</sup>, Eun Kyung Mok, Hoe Jin Hah, Hyea Eun Han, Young Cheol Choi, Seung Ha Kim</div>
+    <div class="pub-meta"><em>Adv. Energy Mater.</em>, 2023, 13:2202949.</div>
+    
+  </div>
+</article>
+        </div>
+      </section>
+
+      <section class="year-block">
+        <h2 class="year-title">2022</h2>
+        <div class="pub-list">
+<article class="pub">
+  <div class="pub-number">(32)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1038/s41467-022-32213-3" target="_blank" rel="noopener">G Protein Coupling and Activation of the Metabotropic GABAB Heterodimer</a></div>
+    <div class="pub-authors"><strong>Moon Young Yang</strong>, Soo-Kyung Kim, William A. Goddard III<sup>*</sup></div>
+    <div class="pub-meta"><em>Nat. Commun.</em>, 2022, 13:4612.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(31)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1039/D2TA02715A" target="_blank" rel="noopener">Structural, Dynamic, and Diffusion Properties of Li6(PS4)SCl Superionic Conductor from Molecular Dynamics Simulations; Prediction of a Dramatically Improved Conductor</a></div>
+    <div class="pub-authors">Tridip Das, Boris V. Merinov<sup>*</sup>, <strong>Moon Young Yang</strong>, William A. Goddard III<sup>*</sup></div>
+    <div class="pub-meta"><em>J. Mater. Chem. A</em>, 2022, 10:16319- 16327.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(30)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1002/elsa.202100007" target="_blank" rel="noopener">Transport Properties of Ionic Liquid Electrolytes from Molecular Dynamics Simulations</a></div>
+    <div class="pub-authors"><strong>Moon Young Yang</strong>, Boris V. Merinov<sup>*</sup>, Sergey V. Zybin, William A. Goddard III<sup>*</sup>, Eun Kyung Mok, Hoe Jin Hah, Hyea Eun Han, Young Cheol Choi, Seung Ha Kim</div>
+    <div class="pub-meta"><em>Electrochem. Sci. Adv.</em>, 2022, 2(2):e2100007.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(29)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1111/jace.18028" target="_blank" rel="noopener">Strengthening Polycrystalline Boron Carbide by Doping Si into Grain Boundaries</a></div>
+    <div class="pub-authors">Yidi Shen, <strong>Moon Young Yang</strong>, William A. Goddard III<sup>*</sup>, Qi An<sup>*</sup></div>
+    <div class="pub-meta"><em>J. Am. Ceram. Soc.</em>, 2022, 105(5):2978-2989.</div>
+    
+  </div>
+</article>
+        </div>
+      </section>
+
+      <section class="year-block">
+        <h2 class="year-title">2021</h2>
+        <div class="pub-list">
+<article class="pub">
+  <div class="pub-number">(28)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1021/acs.jpclett.1c02162" target="_blank" rel="noopener">Structures and Agonist Binding Sites of Bitter Taste Receptor TAS2R5 Complexed with Gi Protein and Validated against Experiment</a></div>
+    <div class="pub-authors"><strong>Moon Young Yang</strong>, Soo-Kyung Kim, Donghwa Kim, Stephen B. Liggett, William A. Goddard III<sup>*</sup></div>
+    <div class="pub-meta"><em>J. Phys. Chem. Lett.</em>, 2021, 12:9293-9300.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(27)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1021/acsbiomaterials.1c00247" target="_blank" rel="noopener">Artificial Taste Buds: Bioorthogonally Ligated Gustatory-Neuronal Multicellular Hybrids Enabling Intercellular Taste Signal Transmission</a></div>
+    <div class="pub-authors">Trang Huyen Le Kim, Bon Il Koo, Sung Duk Jo, Nai-Wen Liang, <strong>Moon Young Yang</strong>, In Cho, Jae-Byum Chang, Tzu-Wei Wang, Yoon Sung Nam<sup>*</sup></div>
+    <div class="pub-meta"><em>ACS Biomater. Sci. Eng.</em>, 2021, 7(8):3783-3792.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(26)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1017/qrd.2021.1" target="_blank" rel="noopener">Predicted Structure of Fully Activated Human Bitter Taste Receptor TAS2R4 Complexed with G Protein and Agonists</a></div>
+    <div class="pub-authors"><strong>Moon Young Yang</strong>, Amirhossein Mafi, Soo-Kyung Kim, William A. Goddard III<sup>*</sup>, Brian Guthrie</div>
+    <div class="pub-meta"><em>QRB Discov.</em>, 2021, 2:e3, 1-8.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(25)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1016/j.jconrel.2021.01.004" target="_blank" rel="noopener">Protein-induced Metamorphosis of Unilamellar Lipid Vesicles to Multilamellar Hybrid Vesicles</a></div>
+    <div class="pub-authors">Bon Il Koo, Inhye Kim, <strong>Moon Young Yang</strong>, Sung Duk Jo, Kunmo Koo, Seo Yeon Shin, Kyung Mok Park, Jong Min Yuk, Eunji Lee<sup>*</sup>, Yoon Sung Nam<sup>*</sup></div>
+    <div class="pub-meta"><em>J. Control. Release</em>, 2021, 331(10):187- 197.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(24)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1016/j.seppur.2020.117674" target="_blank" rel="noopener">Light-Activated Polydopamine Coatings for Efficient Metal Recovery from Electronic Waste</a></div>
+    <div class="pub-authors">Kyeong Rak Kim, Jeonga Kim, Jin Woong Kim, Cafer T. Yavuz, <strong>Moon Young Yang</strong><sup>*</sup>, Yoon Sung Nam<sup>*</sup></div>
+    <div class="pub-meta"><em>Sep. Purif. Technol.</em>, 2021, 254:117674.</div>
+    
+  </div>
+</article>
+        </div>
+      </section>
+
+      <section class="year-block">
+        <h2 class="year-title">2019</h2>
+        <div class="pub-list">
+<article class="pub">
+  <div class="pub-number">(23)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1021/acsami.9b07717" target="_blank" rel="noopener">Sub- nanomolar FRET-based DNA Assay Using Thermally Stable Phosphorothioated DNA-functionalized Quantum Dots</a></div>
+    <div class="pub-authors">Jae Chul Park, Se Yeon Choi, <strong>Moon Young Yang</strong>, Lin Nan, Hyebin Na, Ha Neul Lee, Hyun Jung Chung, Cheol Am Hong<sup>*</sup>, Yoon Sung Nam<sup>*</sup></div>
+    <div class="pub-meta"><em>ACS Appl. Mater. Interfaces</em>, 2019, 11(37):33525-33534.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(22)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1039/C9TA05880J" target="_blank" rel="noopener">Ruthenium-based Plasmonic Hybrid Photocatalyst for Aqueous Carbon Dioxide Conversion with High Reaction Rate and Selectivity</a></div>
+    <div class="pub-authors">Hwiseok Jun, Shinyoung Choi, <strong>Moon Young Yang</strong><sup>*</sup>, Yoon Sung Nam<sup>*</sup></div>
+    <div class="pub-meta"><em>J. Mater. Chem. A</em>, 2019, 7:17254-17260.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(21)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1002/adfm.201902489" target="_blank" rel="noopener">Nitrogen-dopant Induced Organic-Inorganic Hybrid Perovskite Crystal Growth on Carbon Nanotubes</a></div>
+    <div class="pub-authors">Gil Yong Lee, <strong>Moon Young Yang</strong>, Dong-Ha Kim, Joonwon Lim, Jinwoo Byun, Dong Sung Choi, Ho Jin Lee, Yoon Sung Nam, Il-Doo Kim, Sang Ouk Kim<sup>*</sup></div>
+    <div class="pub-meta"><em>Adv. Funct. Mater.</em>, 2019, 29(30):1902489.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(20)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1021/acsabm.9b00120" target="_blank" rel="noopener">Directed Nanoscale Self-assembly of Natural Photosystems on Nitrogen-doped Carbon Nanotubes for Solar Energy Harvesting</a></div>
+    <div class="pub-authors">Insu Kim, Nyeongbeen Jo, <strong>Moon Young Yang</strong>, Jeonga Kim, Hwiseok Jun, Gil Yong Lee, Taeho Shin, Sang Ouk Kim, Yoon Sung Nam<sup>*</sup></div>
+    <div class="pub-meta"><em>ACS Appl. Bio Mater.</em>, 2019, 2(5):2109-2115.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(19)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1021/acs.langmuir.8b02563" target="_blank" rel="noopener">Gold Binding Peptide Identified from Microfluidic Biopanning: An Experimental and Molecular Dynamics Study</a></div>
+    <div class="pub-authors">Dong Jae Lee, Hyun Su Park, Kunmo Koo, Jeong Yong Lee, Yoon Sung Nam, Wonhee Lee<sup>*</sup>, <strong>Moon Young Yang</strong><sup>*</sup></div>
+    <div class="pub-meta"><em>Langmuir</em>, 2019, 35(2):522-528.</div>
+    
+  </div>
+</article>
+        </div>
+      </section>
+
+      <section class="year-block">
+        <h2 class="year-title">2018</h2>
+        <div class="pub-list">
+<article class="pub">
+  <div class="pub-number">(18)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1016/j.jconrel.2018.07.046" target="_blank" rel="noopener">Low- power and Low-drug-dose Photodynamic Chemotherapy via the Breakdown of Tumor-targeted Micelles by Reactive Oxygen Species</a></div>
+    <div class="pub-authors">Geok Leng Seah, Jeong Heon Yu, <strong>Moon Young Yang</strong>, Woo Jin Kim, Jin-Ho Kim, Keunchil Park, Jae-Woo Cho, Jee Seon Kim<sup>*</sup>, Yoon Sung Nam<sup>*</sup></div>
+    <div class="pub-meta"><em>J. Control. Release</em>, 2018, 286:240-253.</div>
+    
+  </div>
+</article>
+        </div>
+      </section>
+
+      <section class="year-block">
+        <h2 class="year-title">2017</h2>
+        <div class="pub-list">
+<article class="pub">
+  <div class="pub-number">(17)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1002/adfm.201703262" target="_blank" rel="noopener">Virus-templated Self- mineralization of Ligand-free Colloidal Palladium Nanostructures for High Surface Activity and Stability</a></div>
+    <div class="pub-authors">Insu Kim<sup>†</sup>, Kyungnam Kang<sup>†</sup>, Mi Hwa Oh, <strong>Moon Young Yang</strong>, Inkyu Park<sup>*</sup>, Yoon Sung Nam<sup>*</sup></div>
+    <div class="pub-meta"><em>Adv. Funct. Mater.</em>, 2017, 27(48):1703262.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(16)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1016/j.biomaterials.2017.08.042" target="_blank" rel="noopener">Polyglycerolated Nanocarriers with Increased Ligand Multivalency for Enhanced in vivo Therapeutic Efficacy of Paclitaxel</a></div>
+    <div class="pub-authors">Trang Huyen Le Kim<sup>†</sup>, Jeong Heon Yu<sup>†</sup>, Hwiseok Jun<sup>†</sup>, <strong>Moon Young Yang</strong>, Mi- Jin Yang, Jae-Woo Cho, Jin Woong Kim<sup>*</sup>, Jee Seon Kim<sup>*</sup>, Yoon Sung Nam<sup>*</sup></div>
+    <div class="pub-meta"><em>Biomater.</em>, 2017, 145:223-232.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(15)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1002/adfm.201700982" target="_blank" rel="noopener">Role of Ordered Ni Atoms in Li Layers for Li-Rich Layered Cathode Materials</a></div>
+    <div class="pub-authors"><strong>Moon Young Yang</strong>, Sangryun Kim, Kyungsu Kim, Woosuk Cho, Jang Wook Choi, Yoon Sung Nam<sup>*</sup></div>
+    <div class="pub-meta"><em>Adv. Funct. Mater.</em>, 2017, 27(35):1700982.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(14)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1039/C6TA09306J" target="_blank" rel="noopener">Spontaneous Linker-Free Binding of Polyoxometalates on N-dopant Sites in Graphene Plane for Efficient Water Oxidation</a></div>
+    <div class="pub-authors">Gil Yong Lee<sup>†</sup>, Insu Kim<sup>†</sup>, Joonwon Lim, <strong>Moon Young Yang</strong>, Dong Sung Choi, Yujin Gu, Youngtak Oh, Seok Hun Kang, Yoon Sung Nam<sup>*</sup>, Sang Ouk Kim<sup>*</sup></div>
+    <div class="pub-meta"><em>J. Mater. Chem. A</em>, 2017, 5(5):1941-1947.</div>
+    
+  </div>
+</article>
+        </div>
+      </section>
+
+      <section class="year-block">
+        <h2 class="year-title">2015</h2>
+        <div class="pub-list">
+<article class="pub">
+  <div class="pub-number">(13)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1021/acsami.5b03249" target="_blank" rel="noopener">Bioinspired Design of an Immobilization Interface for Highly Stable, Recyclable Nanosized Catalysts</a></div>
+    <div class="pub-authors">Insu Kim<sup>†</sup>, Ho Yeon Son<sup>†</sup>, <strong>Moon Young Yang</strong>, Yoon Sung Nam<sup>*</sup></div>
+    <div class="pub-meta"><em>ACS Appl. Mater. Interfaces</em>, 2015, 7(26):14415-14422.</div>
+    
+  </div>
+</article>
+        </div>
+      </section>
+
+      <section class="year-block">
+        <h2 class="year-title">2014</h2>
+        <div class="pub-list">
+<article class="pub">
+  <div class="pub-number">(12)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.7567/APEX.7.074202" target="_blank" rel="noopener">Role of Nitrogen Incorporation into Al2O3-based Resistive Random-Access-Memory</a></div>
+    <div class="pub-authors"><strong>Moon Young Yang</strong><sup>*</sup>, Katsumasa Kamiya, Hiroki Shirakawa, Blanka Magyari- Köpe, Yoshio Nishi, Kenji Shiraishi</div>
+    <div class="pub-meta"><em>Appl. Phys. Express</em>, 2014, 7(7):074202.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(11)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.7567/JJAP.53.058006" target="_blank" rel="noopener">First-principles evaluation of penetration energy of metal atom into Si substrate</a></div>
+    <div class="pub-authors">Tomoki Hiramatsu<sup>*</sup>, Takashi Yamauchi, <strong>Moon Young Yang</strong>, Katsumasa Kamiya, Kenji Shiraishi, Takashi Nakayama<sup>*</sup></div>
+    <div class="pub-meta"><em>Jpn. J. Appl. Phys.</em>, 2014, 53(5):058006.</div>
+    
+  </div>
+</article>
+        </div>
+      </section>
+
+      <section class="year-block">
+        <h2 class="year-title">2013</h2>
+        <div class="pub-list">
+<article class="pub">
+  <div class="pub-number">(10)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1080/07391102.2013.834848" target="_blank" rel="noopener">Substrate mediated proton relay mechanism for the religation reaction in topoisomerase II</a></div>
+    <div class="pub-authors">Kyohei Hanaoka<sup>*</sup>, Mitsuo Shoji, Daiki Kondo, Akimasa Sato, <strong>Moon Young Yang</strong>, Katsumasa Kamiya, Kenji Shiraishi</div>
+    <div class="pub-meta"><em>J. Biomol. Struct. Dyn.</em>, 2013, 32(11):1759-1765.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(9)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1063/1.4819772" target="_blank" rel="noopener">Charge-dependent oxygen vacancy diffusion in Al2O3-based resistive-random-access-memories</a></div>
+    <div class="pub-authors"><strong>Moon Young Yang</strong><sup>*</sup>, Katsumasa Kamiya, Blanka Magyari-Köpe, Masaaki Niwa, Yoshio Nishi, Kenji Shiraishi</div>
+    <div class="pub-meta"><em>Appl. Phys. Lett.</em>, 2013, 103(9):093504.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(8)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.7567/JJAP.52.04CD11" target="_blank" rel="noopener">Physical guiding principles for high quality resistive random access memory stack with Al2O3 insertion layer</a></div>
+    <div class="pub-authors"><strong>Moon Young Yang</strong><sup>*</sup>, Katsumasa Kamiya, Blanka Magyari-Köpe, Hiroyoshi Momida, Takahisa Ohno, Masaaki Niwa, Yoshio Nishi, Kenji Shiraishi</div>
+    <div class="pub-meta"><em>Jpn J. Appl. Phys.</em>, 2013, 52(4S):04CD11.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(7)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1103/PhysRevB.87.155201" target="_blank" rel="noopener">Generalized mechanism of the resistance switching in binary-oxide-based resistive random-access memories</a></div>
+    <div class="pub-authors">Katsumasa Kamiya<sup>*</sup>, <strong>Moon Young Yang</strong>, Takahiro Nagata, Seong-Geon Park, Blanka Magyari-Köpe, Toyohiro Chikyow, Keisaku Yamada, Masaaki Niwa, Yoshio Nishi, Kenji Shiraishi</div>
+    <div class="pub-meta"><em>Phys. Rev. B</em>, 2013, 87(15):155201.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(6)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1063/1.4817432" target="_blank" rel="noopener">Energetics and electron states of Au/Ag incorporated into crystalline/amorphous silicon</a></div>
+    <div class="pub-authors"><strong>Moon Young Yang</strong><sup>*</sup>, Katsumasa Kamiya, Takashi Yamauchi, Takashi Nakayama, Kenji Shiraishi</div>
+    <div class="pub-meta"><em>J. Appl. Phys.</em>, 2013, 114(6):063701.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(5)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1063/1.4825071" target="_blank" rel="noopener">Interstitial Oxygen Induced Fermi Level Pinning in the Al2O3-based High-k MISFET with Heavy-doped n-type Poly-Si Gates</a></div>
+    <div class="pub-authors"><strong>Moon Young Yang</strong><sup>*</sup>, Katsumasa Kamiya, Kenji Shiraishi</div>
+    <div class="pub-meta"><em>AIP Adv.</em>, 2013, 3(10):102113.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(4)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1002/qua.24074" target="_blank" rel="noopener">Calculation of the Electron Transfer Coupling Matrix Element in Diabatic Reactions</a></div>
+    <div class="pub-authors">Mitsuo Shoji<sup>*</sup>, Kyohei Hanaoka, Akimasa Sato, Daiki Kondo, <strong>Moon Young Yang</strong>, Katsumasa Kamiya, Kenji Shiraishi</div>
+    <div class="pub-meta"><em>Int. J. Quantum Chem.</em>, 2013, 113(3):342-347.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(3)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1109/TED.2013.2279397" target="_blank" rel="noopener">Vacancy Cohesion-Isolation Phase Transition upon Charge Injection and Removal in Binary Oxide-Based RRAM Filamentary-Type Switching</a></div>
+    <div class="pub-authors">Katsumasa Kamiya<sup>*</sup>, <strong>Moon Young Yang</strong>, Blanka Magyari-Köpe, Masaaki Niwa, Yoshio Nishi, Kenji Shiraishi</div>
+    <div class="pub-meta"><em>IEEE Trans. Electron Devices</em>, 2013, 60(10):3400-3406.</div>
+    
+  </div>
+</article>
+        </div>
+      </section>
+
+      <section class="year-block">
+        <h2 class="year-title">2012</h2>
+        <div class="pub-list">
+<article class="pub">
+  <div class="pub-number">(2)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1063/1.4718758" target="_blank" rel="noopener">Theoretical study of Si-based ionic switch</a></div>
+    <div class="pub-authors">Takashi Yamauchi<sup>*</sup>, <strong>Moon Young Yang</strong>, Katsumasa Kamiya, Kenji Shiraishi, Takashi Nakayama</div>
+    <div class="pub-meta"><em>Appl. Phys. Lett.</em>, 2012, 100(20):203506.</div>
+    
+  </div>
+</article>
+<article class="pub">
+  <div class="pub-number">(1)</div>
+  <div class="pub-body">
+    <div class="pub-title"><a class="title-link" href="https://doi.org/10.1063/1.3685222" target="_blank" rel="noopener">ON-OFF switching mechanism of resistive-random-access-memories based on the formation and disruption of oxygen vacancy conducting channels</a></div>
+    <div class="pub-authors">Katsumasa Kamiya<sup>*</sup>, <strong>Moon Young Yang</strong>, Seong-Geon Park, Blanka Magyari- Köpe, Yoshio Nishi, Masaaki Niwa, Kenji Shiraishi</div>
+    <div class="pub-meta"><em>Appl. Phys. Lett.</em>, 2012, 100(7):073502.</div>
+    
+  </div>
+</article>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer id="contact">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-title">MY Yang Lab at DGIST</div>
+        <div>
+          Daegu Gyeongbuk Institute of Science and Technology, DGIST<br />
+          Daegu, Republic of Korea<br />
+          Email: <a href="mailto:your.email@dgist.ac.kr">your.email@dgist.ac.kr</a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="people.html">People</a>
+        <a href="news.html">News</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="join.html">Join Us</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 MY Yang Lab at DGIST</div>
+      <div>Built with GitHub Pages</div>
+    </div>
+  </footer>
+</body>
+</html>
