@@ -22,6 +22,10 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Arial, sans-serif;
@@ -61,7 +65,7 @@
 
     .nav-links {
       display: flex;
-      gap: 24px;
+      gap: 22px;
       font-size: 0.95rem;
       color: var(--muted);
     }
@@ -116,7 +120,8 @@
     }
 
     .btn-primary,
-    .btn-secondary {
+    .btn-secondary,
+    .btn-light {
       display: inline-block;
       padding: 13px 22px;
       border-radius: 999px;
@@ -142,6 +147,17 @@
     }
 
     .btn-secondary:hover {
+      transform: translateY(-2px);
+      background: var(--soft-blue);
+    }
+
+    .btn-light {
+      background: white;
+      color: var(--navy);
+      border: none;
+    }
+
+    .btn-light:hover {
       transform: translateY(-2px);
       background: var(--soft-blue);
     }
@@ -261,6 +277,13 @@
       padding: 26px;
       box-shadow: 0 14px 40px rgba(11, 31, 58, 0.06);
       min-height: 220px;
+      transition: 0.2s ease;
+    }
+
+    a.card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 52px rgba(11, 31, 58, 0.1);
+      border-color: rgba(15, 76, 129, 0.28);
     }
 
     .card-icon {
@@ -274,6 +297,7 @@
       justify-content: center;
       font-weight: 800;
       margin-bottom: 18px;
+      font-size: 0.9rem;
     }
 
     .card h3 {
@@ -286,6 +310,14 @@
       color: var(--muted);
       margin: 0;
       font-size: 0.96rem;
+    }
+
+    .card-link {
+      display: inline-block;
+      margin-top: 18px;
+      color: var(--deep-blue);
+      font-weight: 700;
+      font-size: 0.92rem;
     }
 
     .alt {
@@ -315,6 +347,45 @@
       font-size: 0.95rem;
     }
 
+    .section-action {
+      margin-top: 28px;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .news-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: 0 14px 40px rgba(11, 31, 58, 0.05);
+    }
+
+    .news-date {
+      color: var(--deep-blue);
+      font-size: 0.86rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .news-card h3 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-size: 1.08rem;
+    }
+
+    .news-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
     .join-box {
       background: linear-gradient(135deg, var(--navy), var(--deep-blue));
       color: var(--white);
@@ -336,33 +407,67 @@
     .join-box p {
       margin: 0;
       color: rgba(255,255,255,0.82);
-      max-width: 720px;
+      max-width: 760px;
     }
 
-    .join-box .btn-secondary {
-      background: white;
-      border: none;
-      color: var(--navy);
-      white-space: nowrap;
+    .join-note {
+      margin-top: 16px;
+      color: rgba(255,255,255,0.72);
+      font-size: 0.95rem;
     }
 
     footer {
-      padding: 36px 7vw;
+      padding: 38px 7vw;
       border-top: 1px solid var(--line);
       color: var(--muted);
       font-size: 0.94rem;
+      background: white;
     }
 
     .footer-inner {
       max-width: 1180px;
       margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .footer-title {
+      color: var(--navy);
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+    }
+
+    .footer-links a:hover {
+      color: var(--deep-blue);
+    }
+
+    .footer-bottom {
+      max-width: 1180px;
+      margin: 24px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
       display: flex;
       justify-content: space-between;
       gap: 20px;
       flex-wrap: wrap;
+      color: #7a8795;
+      font-size: 0.9rem;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 980px) {
       .hero {
         grid-template-columns: 1fr;
         padding-top: 64px;
@@ -376,8 +481,20 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
+
       .join-box {
         grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-links {
+        justify-content: flex-start;
       }
 
       .nav-links {
@@ -405,13 +522,14 @@
 <body>
   <nav class="nav">
     <div class="nav-inner">
-      <a class="logo" href="#">MY Yang Lab</a>
+      <a class="logo" href="index.html">MY Yang Lab</a>
       <div class="nav-links">
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#people">People</a>
-        <a href="#join">Join Us</a>
-        <a href="#contact">Contact</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="people.html">People</a>
+        <a href="news.html">News</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="join.html">Join Us</a>
       </div>
     </div>
   </nav>
@@ -426,8 +544,8 @@
           across energy, catalysis, and biomolecular science.
         </p>
         <div class="buttons">
-          <a class="btn-primary" href="#research">Explore Research</a>
-          <a class="btn-secondary" href="#join">Join Us</a>
+          <a class="btn-primary" href="research.html">Explore Research</a>
+          <a class="btn-secondary" href="join.html">Join Us</a>
         </div>
       </div>
 
@@ -463,37 +581,41 @@
         </p>
 
         <div class="cards">
-          <div class="card">
+          <a class="card" href="research.html#ai">
             <div class="card-icon">AI</div>
             <h3>AI for Molecular Science</h3>
             <p>
               Integrating molecular simulation, data-driven modeling, and machine learning for molecular discovery.
             </p>
-          </div>
+            <span class="card-link">Learn more →</span>
+          </a>
 
-          <div class="card">
+          <a class="card" href="research.html#simulation">
             <div class="card-icon">MD</div>
             <h3>Multiscale Simulation</h3>
             <p>
               Connecting electronic structure, atomistic dynamics, and mesoscale behavior in complex systems.
             </p>
-          </div>
+            <span class="card-link">Learn more →</span>
+          </a>
 
-          <div class="card">
+          <a class="card" href="research.html#energy">
             <div class="card-icon">EN</div>
             <h3>Energy & Catalysis</h3>
             <p>
               Understanding reaction mechanisms, interfaces, and molecular design principles for energy applications.
             </p>
-          </div>
+            <span class="card-link">Learn more →</span>
+          </a>
 
-          <div class="card">
+          <a class="card" href="research.html#bio">
             <div class="card-icon">BIO</div>
             <h3>Biomolecular Systems</h3>
             <p>
               Modeling receptors, proteins, and bio-inspired molecular systems to understand structure-function relationships.
             </p>
-          </div>
+            <span class="card-link">Learn more →</span>
+          </a>
         </div>
       </div>
     </section>
@@ -521,27 +643,51 @@
             <div class="pub-meta">Authors. Journal, Year. DOI / PDF / Code</div>
           </div>
         </div>
+
+        <div class="section-action">
+          <a class="btn-secondary" href="publications.html">View all publications</a>
+        </div>
       </div>
     </section>
 
-    <section id="people">
+    <section id="news">
       <div class="section-inner">
-        <h2 class="section-title">People</h2>
+        <h2 class="section-title">News & Updates</h2>
         <p class="section-lead">
-          MY Yang Lab is opening at DGIST. We welcome motivated students and researchers interested in
-          molecular simulation, quantum chemistry, AI for science, catalysis, and energy materials.
+          Lab news, publications, group activities, and opportunities will be posted here.
         </p>
 
-        <div class="cards">
-          <div class="card">
-            <div class="card-icon">PI</div>
-            <h3>Moon Young Yang</h3>
+        <div class="news-grid">
+          <div class="news-card">
+            <div class="news-date">Nov 2026</div>
+            <h3>MY Yang Lab opens at DGIST</h3>
             <p>
-              Principal Investigator<br />
-              Assistant Professor, DGIST<br />
-              Molecular simulation / AI / Catalysis
+              Our group begins its journey at DGIST, focusing on molecular simulation,
+              quantum chemistry, and AI-driven molecular design.
             </p>
           </div>
+
+          <div class="news-card">
+            <div class="news-date">Nov 2026</div>
+            <h3>We are recruiting</h3>
+            <p>
+              We welcome motivated graduate students, undergraduate researchers,
+              and postdoctoral researchers interested in computational molecular science.
+            </p>
+          </div>
+
+          <div class="news-card">
+            <div class="news-date">Coming soon</div>
+            <h3>Group activities and gallery</h3>
+            <p>
+              Photos from group meetings, events, conferences, and lab activities
+              will be shared in the gallery.
+            </p>
+          </div>
+        </div>
+
+        <div class="section-action">
+          <a class="btn-secondary" href="news.html">View all news</a>
         </div>
       </div>
     </section>
@@ -553,29 +699,42 @@
             <h2>Join Us</h2>
             <p>
               We are recruiting graduate students, undergraduate researchers, and postdoctoral researchers
-              interested in computational molecular science and AI-driven molecular design.
+              interested in molecular simulation, quantum chemistry, AI for science, catalysis, energy materials,
+              and biomolecular systems.
             </p>
+            <div class="join-note">
+              Prospective students are encouraged to contact Prof. Yang with a CV, transcript,
+              and a brief description of research interests.
+            </div>
           </div>
-          <a class="btn-secondary" href="mailto:your.email@dgist.ac.kr">Contact Us</a>
+          <a class="btn-light" href="join.html">Open Positions</a>
         </div>
-      </div>
-    </section>
-
-    <section id="contact" class="alt">
-      <div class="section-inner">
-        <h2 class="section-title">Contact</h2>
-        <p class="section-lead">
-          MY Yang Lab<br />
-          Daegu Gyeongbuk Institute of Science and Technology, DGIST<br />
-          Daegu, Republic of Korea<br /><br />
-          Email: TBD
-        </p>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer id="contact">
     <div class="footer-inner">
+      <div>
+        <div class="footer-title">MY Yang Lab at DGIST</div>
+        <div>
+          Daegu Gyeongbuk Institute of Science and Technology, DGIST<br />
+          Daegu, Republic of Korea<br />
+          Email: <a href="mailto:your.email@dgist.ac.kr">your.email@dgist.ac.kr</a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="people.html">People</a>
+        <a href="news.html">News</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="join.html">Join Us</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
       <div>© 2026 MY Yang Lab at DGIST</div>
       <div>Built with GitHub Pages</div>
     </div>
