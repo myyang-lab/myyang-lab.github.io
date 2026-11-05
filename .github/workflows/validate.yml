@@ -1,0 +1,40 @@
+name: Validate static site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Check generated files and data
+        run: |
+          python3 scripts/build.py --check
+          python3 -m unittest discover -s tests -v
+          node --check src/site.js
+      - name: Build deployment artifact
+        run: python3 scripts/build.py --output _site
+      - name: Install browser test tools
+        run: |
+          python3 -m pip install playwright==1.62.0
+          python3 -m playwright install --with-deps chromium
+      - name: Check responsive pages in Chromium
+        run: python3 tests/browser_smoke.py --site _site
+      - uses: actions/upload-artifact@v4
+        with:
+          name: static-site
+          path: _site/
+          include-hidden-files: true

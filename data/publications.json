@@ -1,0 +1,2381 @@
+[
+  {
+    "number": 63,
+    "key": "yu2026metalanode",
+    "title": "Li/Na Mixed Metal Nitride as a Protective Layer for Na Metal Anodes",
+    "authors": [
+      {
+        "name": "Chenzheng Yu"
+      },
+      {
+        "name": "Tridip Das"
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Sejun Kim"
+      },
+      {
+        "name": "Boris V. Merinov"
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      }
+    ],
+    "journal": "J. Phys. Chem. C",
+    "year": null,
+    "doi": "10.1021/acs.jpcc.6c05138",
+    "status": "Accepted"
+  },
+  {
+    "number": 62,
+    "key": "cui2026ceria",
+    "title": "Nonclassical Growth to Mesoporous Quasi-Single Crystal CeO₂ Superstructures with a Well-Defined Surface",
+    "authors": [
+      {
+        "name": "Meiyang Cui",
+        "equal": true
+      },
+      {
+        "name": "Xiangru Wei",
+        "equal": true
+      },
+      {
+        "name": "Moon Young Yang",
+        "equal": true
+      },
+      {
+        "name": "Grayson Johnson",
+        "equal": true
+      },
+      {
+        "name": "Perrin Godbold"
+      },
+      {
+        "name": "Yizhen Chen"
+      },
+      {
+        "name": "Maoyu Wang"
+      },
+      {
+        "name": "Yugang Zhang"
+      },
+      {
+        "name": "Chang Liu"
+      },
+      {
+        "name": "Shengsong Yang"
+      },
+      {
+        "name": "Brian Lee"
+      },
+      {
+        "name": "Sooyeon Hwang"
+      },
+      {
+        "name": "Farzad Bastani"
+      },
+      {
+        "name": "Mingyang Liu"
+      },
+      {
+        "name": "Petra Reinke"
+      },
+      {
+        "name": "Lu Ma"
+      },
+      {
+        "name": "Hua Zhou"
+      },
+      {
+        "name": "Christopher B. Murray"
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      },
+      {
+        "name": "Sen Zhang",
+        "corresponding": true
+      }
+    ],
+    "journal": "Proc. Natl. Acad. Sci. U. S. A.",
+    "year": 2026,
+    "doi": "10.1073/pnas.2617489123",
+    "volume": "123",
+    "issue": "42",
+    "pages": "e2617489123"
+  },
+  {
+    "number": 61,
+    "key": "morales2026cobaltiii",
+    "title": "Cobalt(III)-Schiff Base Coordination to Nsp1, a SARS-CoV-2 protein",
+    "authors": [
+      {
+        "name": "Maryann Morales"
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      },
+      {
+        "name": "Harry B. Gray",
+        "corresponding": true
+      },
+      {
+        "name": "Jay R. Winkler",
+        "corresponding": true
+      }
+    ],
+    "journal": "Inorg. Chem.",
+    "year": 2026,
+    "doi": "10.1021/acs.inorgchem.6c01698",
+    "volume": "65",
+    "issue": "30",
+    "pages": "17325–17333"
+  },
+  {
+    "number": 60,
+    "key": "brubaker2026understandingbiased",
+    "title": "Understanding Biased Signaling and Small-Molecule Binding for treatment of type 2 diabetes mellitus and obesity at the Glucagon-Like Peptide-1 Receptor (GLP-1R) based on Molecular Dynamics Simulations",
+    "authors": [
+      {
+        "name": "Jack Brubaker"
+      },
+      {
+        "name": "Soo-Kyung Kim"
+      },
+      {
+        "name": "Bo Li"
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      }
+    ],
+    "journal": "Med. Chem. Res.",
+    "year": 2026,
+    "doi": "10.1007/s00044-026-03579-6",
+    "volume": "35",
+    "issue": "10",
+    "pages": "2073–2093"
+  },
+  {
+    "number": 59,
+    "key": "yang2026stochasticitysolvent",
+    "title": "Stochasticity of Solvent Dynamics: Why Dipoles Emerge Where No Dipoles Are Expected?",
+    "authors": [
+      {
+        "name": "Moon Young Yang",
+        "equal": true
+      },
+      {
+        "name": "Omar O'Mari",
+        "equal": true
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      },
+      {
+        "name": "Valentine I. Vullev",
+        "corresponding": true
+      }
+    ],
+    "journal": "J. Phys. Chem. Lett.",
+    "year": 2026,
+    "doi": "10.1021/acs.jpclett.5c03868",
+    "volume": "17",
+    "issue": "5",
+    "pages": "1361-1369"
+  },
+  {
+    "number": 58,
+    "key": "han2026mechanistictransformation",
+    "title": "Mechanistic Transformation of CuI Nanoparticles into Oxidation-Resistant 2D Copper Nanoplates",
+    "authors": [
+      {
+        "name": "Hyeuk Jin Han",
+        "equal": true
+      },
+      {
+        "name": "Moon Young Yang",
+        "equal": true
+      },
+      {
+        "name": "Changsoo Lee",
+        "equal": true
+      },
+      {
+        "name": "Gangtae Jin"
+      },
+      {
+        "name": "James L. Hart"
+      },
+      {
+        "name": "Rabecca Mutheu"
+      },
+      {
+        "name": "Hyung Il Lee"
+      },
+      {
+        "name": "Seo Hyun Kim"
+      },
+      {
+        "name": "Hanhwi Jang"
+      },
+      {
+        "name": "Minjoon Kim"
+      },
+      {
+        "name": "Yeon Sik Jung"
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      },
+      {
+        "name": "Judy J. Cha",
+        "corresponding": true
+      },
+      {
+        "name": "Chungseok Choi",
+        "corresponding": true
+      }
+    ],
+    "journal": "Small",
+    "year": 2026,
+    "doi": "10.1002/smll.202508098",
+    "volume": "22",
+    "pages": "e08098"
+  },
+  {
+    "number": 57,
+    "key": "luo2025acceleratingpolysulfide",
+    "title": "Accelerating Polysulfide Redox Kinetics via the Metal-Insulator Interface in a Binder-Free Separator for Long-Life Lithium-Sulfur Batteries",
+    "authors": [
+      {
+        "name": "Jin Luo"
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Yuhe Mu"
+      },
+      {
+        "name": "Zhongjiu Yang"
+      },
+      {
+        "name": "Boris V Merinov"
+      },
+      {
+        "name": "William A Goddard III",
+        "corresponding": true
+      },
+      {
+        "name": "Yue Zhou",
+        "corresponding": true
+      }
+    ],
+    "journal": "ACS Nano",
+    "year": 2025,
+    "doi": "10.1021/acsnano.5c17793",
+    "volume": "19",
+    "pages": "42951-42963"
+  },
+  {
+    "number": 56,
+    "key": "iii2025atomisticcharacterization",
+    "title": "Atomistic characterization of hydration-dependent fuel cell ionomer nanostructure: validation by vibrational spectroscopy",
+    "authors": [
+      {
+        "name": "Dan J. Donnelly III",
+        "equal": true
+      },
+      {
+        "name": "Moon Young Yang",
+        "equal": true
+      },
+      {
+        "name": "Nicholas Dimakis",
+        "corresponding": true
+      },
+      {
+        "name": "Seung Soon Jang"
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      },
+      {
+        "name": "Eugene S. Smotkin",
+        "corresponding": true
+      }
+    ],
+    "journal": "J. Mater. Chem. A",
+    "year": 2025,
+    "doi": "10.1039/D5TA03973H",
+    "volume": "13",
+    "pages": "24495-24510"
+  },
+  {
+    "number": 55,
+    "key": "nag2025atomicallyprecise",
+    "title": "An atomically precise alloy AgCu cuboid nanocluster with a cubic core: gram scale synthesis, total structure, electronic structure, and catalytic performance",
+    "authors": [
+      {
+        "name": "Abhijit Nag"
+      },
+      {
+        "name": "Abdul Mannan Butt"
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Bilal Masood Pirzada"
+      },
+      {
+        "name": "Mohamed Infas"
+      },
+      {
+        "name": "Praveen B. Managutti"
+      },
+      {
+        "name": "Sharmarke Mohamed"
+      },
+      {
+        "name": "Ahmed L. Abdelhady"
+      },
+      {
+        "name": "Mohamed Abu Haija"
+      },
+      {
+        "name": "Boris V. Merinov"
+      },
+      {
+        "name": "William A. Goddard III"
+      },
+      {
+        "name": "Ahsanulhaq Qurashi",
+        "corresponding": true
+      }
+    ],
+    "journal": "Mater. Horiz.",
+    "year": 2025,
+    "doi": "10.1039/D4MH01324G",
+    "volume": "12",
+    "pages": "5252-5258"
+  },
+  {
+    "number": 54,
+    "key": "tomich2025combustionresistant",
+    "title": "Combustion Resistant Borohydrides and their Chemical Interactions with Li-Metal Surfaces: An Experimental and Theoretical Study",
+    "authors": [
+      {
+        "name": "Anton Tomich"
+      },
+      {
+        "name": "Stephen Proctor"
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Jianjun Chen"
+      },
+      {
+        "name": "Yifan Zhao"
+      },
+      {
+        "name": "Edward Chen"
+      },
+      {
+        "name": "Tridip Das"
+      },
+      {
+        "name": "Boris Merinov"
+      },
+      {
+        "name": "Juchen Guo",
+        "corresponding": true
+      },
+      {
+        "name": "William Goddard III",
+        "corresponding": true
+      },
+      {
+        "name": "Vincent Lavallo",
+        "corresponding": true
+      }
+    ],
+    "journal": "ACS Cent. Sci.",
+    "year": 2025,
+    "doi": "10.1021/acscentsci.5c00043",
+    "volume": "11",
+    "pages": "734-741"
+  },
+  {
+    "number": 53,
+    "key": "das2025structureion",
+    "title": "Structure and Ion Diffusion of Hexagonal Li5(PS4)Cl2 Superionic Conductor from Molecular Dynamics Simulations",
+    "authors": [
+      {
+        "name": "Tridip Das"
+      },
+      {
+        "name": "Boris V. Merinov",
+        "corresponding": true
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      }
+    ],
+    "journal": "J. Power Sources",
+    "year": 2025,
+    "doi": "10.1016/j.jpowsour.2025.237212",
+    "volume": "646",
+    "pages": "237212"
+  },
+  {
+    "number": 52,
+    "key": "lin2025cooperativeeffects",
+    "title": "Cooperative Effects Associated with High Electrolyte Concentrations in Driving the Conversion of CO2 to C2H4 on Copper",
+    "authors": [
+      {
+        "name": "Shaoyang Lin",
+        "equal": true
+      },
+      {
+        "name": "Yuval Fishler",
+        "equal": true
+      },
+      {
+        "name": "Soonho Kwon",
+        "equal": true
+      },
+      {
+        "name": "Annette Böhme"
+      },
+      {
+        "name": "Weixuan Nie"
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Jesse Matthews"
+      },
+      {
+        "name": "Zachery W. B. Iton"
+      },
+      {
+        "name": "Brian C. Lee"
+      },
+      {
+        "name": "Thomas Jaramillo"
+      },
+      {
+        "name": "Harry A. Atwater"
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      },
+      {
+        "name": "Wilson A. Smith",
+        "corresponding": true
+      },
+      {
+        "name": "Kimberly A. See",
+        "corresponding": true
+      }
+    ],
+    "journal": "Chem. Catal.",
+    "year": 2025,
+    "doi": "10.1016/j.checat.2025.101338",
+    "volume": "5",
+    "pages": "101338"
+  },
+  {
+    "number": 51,
+    "key": "yang2025metabotropicgabab",
+    "title": "Metabotropic GABAB Receptor Activation Induced by G Protein Coupling",
+    "authors": [
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Soo-Kyung Kim"
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      }
+    ],
+    "journal": "J. Am. Chem. Soc.",
+    "year": 2025,
+    "doi": "10.1021/jacs.4c14672",
+    "volume": "147",
+    "pages": "1911-1919"
+  },
+  {
+    "number": 50,
+    "key": "nag2025polymorphismcu15",
+    "title": "Polymorphism of [Cu15(PET)13(TPP)6][BF4]2 and Double-Helical Assembly of [Cu18H(PET)14(TPP)6Cl3]: A Study of Chiral Nanoclusters Triple-Helical Core from the Reaction Intermediate",
+    "authors": [
+      {
+        "name": "Abhijit Nag"
+      },
+      {
+        "name": "Abdul Mannan Butt"
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Bilal Masood Pirzada"
+      },
+      {
+        "name": "Mohamed Infas"
+      },
+      {
+        "name": "Praveen B. Managutti"
+      },
+      {
+        "name": "Sharmarke Mohamed"
+      },
+      {
+        "name": "Ahmed L. Abdelhady"
+      },
+      {
+        "name": "Mohamed Abu Haija"
+      },
+      {
+        "name": "Boris V. Merinov"
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      },
+      {
+        "name": "Ahsanulhaq Qurashi",
+        "corresponding": true
+      }
+    ],
+    "journal": "ACS Mater. Lett.",
+    "year": 2025,
+    "doi": "10.1021/acsmaterialslett.4c02148",
+    "volume": "7",
+    "pages": "442-449"
+  },
+  {
+    "number": 49,
+    "key": "wu2025dynamicsupramolecular",
+    "title": "Dynamic supramolecular snub cubes",
+    "authors": [
+      {
+        "name": "Huang Wu",
+        "corresponding": true
+      },
+      {
+        "name": "Yu Wang",
+        "corresponding": true
+      },
+      {
+        "name": "Luka Đorđević"
+      },
+      {
+        "name": "Pramita Kundu"
+      },
+      {
+        "name": "Surojit Bhunia"
+      },
+      {
+        "name": "Aspen X.-Y. Chen"
+      },
+      {
+        "name": "Liang Feng"
+      },
+      {
+        "name": "Dengke Shen"
+      },
+      {
+        "name": "Wenqi Liu"
+      },
+      {
+        "name": "Long Zhang"
+      },
+      {
+        "name": "Bo Song"
+      },
+      {
+        "name": "Guangcheng Wu"
+      },
+      {
+        "name": "Bai-Tong Liu"
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Yong Yang"
+      },
+      {
+        "name": "Charlotte Stern"
+      },
+      {
+        "name": "Samuel Stupp"
+      },
+      {
+        "name": "William A. Goddard III"
+      },
+      {
+        "name": "Wenping Hu",
+        "corresponding": true
+      },
+      {
+        "name": "Fraser Stoddart",
+        "corresponding": true
+      }
+    ],
+    "journal": "Nature",
+    "year": 2025,
+    "doi": "10.1038/s41586-024-08266-3",
+    "volume": "637",
+    "pages": "347- 353"
+  },
+  {
+    "number": 48,
+    "key": "omari2025howrigid",
+    "title": "How Rigid are Anthranilamide Molecular Electrets?",
+    "authors": [
+      {
+        "name": "Omar O'Mari",
+        "equal": true
+      },
+      {
+        "name": "Moon Young Yang",
+        "equal": true
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      },
+      {
+        "name": "Valentine I. Vullev",
+        "corresponding": true
+      }
+    ],
+    "journal": "J. Phys. Chem. B",
+    "year": 2025,
+    "doi": "10.1021/acs.jpcb.4c04103",
+    "volume": "129",
+    "issue": "6",
+    "pages": "1750-1759",
+    "note": "Selected as the front cover"
+  },
+  {
+    "number": 47,
+    "key": "yang2024agonistactivation",
+    "title": "Agonist activation to open the G? subunit of the GPCR-G protein precoupled complex defines functional agonist activation of TAS2R5",
+    "authors": [
+      {
+        "name": "Moon Young Yang",
+        "equal": true
+      },
+      {
+        "name": "Khuong Duy Mac",
+        "equal": true
+      },
+      {
+        "name": "Hannah R. Strzelinski"
+      },
+      {
+        "name": "Samantha A. Hoffman"
+      },
+      {
+        "name": "Donghwa Kim"
+      },
+      {
+        "name": "Soo-Kyung Kim"
+      },
+      {
+        "name": "Judith Su",
+        "corresponding": true
+      },
+      {
+        "name": "Stephen B. Liggett",
+        "corresponding": true
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      }
+    ],
+    "journal": "Proc. Natl. Acad. Sci. U. S. A.",
+    "year": 2024,
+    "doi": "10.1073/pnas.2409987121",
+    "volume": "131",
+    "issue": "48",
+    "pages": "e2409987121"
+  },
+  {
+    "number": 46,
+    "key": "li2024gprotein",
+    "title": "The G Protein-First Mechanism for Activation of the Class B Glucagon-Like Peptide 1 Receptor Coupled to N-Terminal Domain-Mediated Conformational Progression",
+    "authors": [
+      {
+        "name": "Bo Li"
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Soo-Kyung Kim"
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      }
+    ],
+    "journal": "J. Am. Chem. Soc.",
+    "year": 2024,
+    "doi": "10.1021/jacs.4c08128",
+    "volume": "146",
+    "issue": "38",
+    "pages": "26251-26260"
+  },
+  {
+    "number": 45,
+    "key": "yang2024moleculardynamics",
+    "title": "A Molecular Dynamics Investigation into CerENP's Effect on the Lipid Matrix of Stratum Corneum",
+    "authors": [
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Eunok Lee"
+      },
+      {
+        "name": "Chang-Seo Park"
+      },
+      {
+        "name": "Yoon Sung Nam",
+        "corresponding": true
+      }
+    ],
+    "journal": "J. Phys. Chem. B",
+    "year": 2024,
+    "doi": "10.1021/acs.jpcb.4c00053",
+    "volume": "128",
+    "pages": "5378-5386"
+  },
+  {
+    "number": 44,
+    "key": "pokharel2024manipulatingdiffusion",
+    "title": "Manipulating the Diffusion Energy Barrier at the Lithium Metal Electrolyte Interface for Dendrite-free Long-life Batteries",
+    "authors": [
+      {
+        "name": "Jyotshna Pokharel"
+      },
+      {
+        "name": "Arthur Cresce"
+      },
+      {
+        "name": "Bharat Pant"
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Ashim Gurung"
+      },
+      {
+        "name": "Wei He"
+      },
+      {
+        "name": "Abiral Baniya"
+      },
+      {
+        "name": "Buddhi Sagar Lamsal"
+      },
+      {
+        "name": "Zhongjiu Yang"
+      },
+      {
+        "name": "Stephen Gent"
+      },
+      {
+        "name": "Ye Cao",
+        "corresponding": true
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      },
+      {
+        "name": "Kang Xu",
+        "corresponding": true
+      },
+      {
+        "name": "Yue Zhou",
+        "corresponding": true
+      }
+    ],
+    "journal": "Nat. Commun.",
+    "year": 2024,
+    "doi": "10.1038/s41467-024-47521-z",
+    "volume": "15",
+    "pages": "3085"
+  },
+  {
+    "number": 43,
+    "key": "morales2024copperii",
+    "title": "Copper(II) Coordination to the Intrinsically Disordered Region of SARS-CoV-2 Nsp1",
+    "authors": [
+      {
+        "name": "Maryann Morales",
+        "equal": true
+      },
+      {
+        "name": "Moon Young Yang",
+        "equal": true
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      },
+      {
+        "name": "Harry B. Gray",
+        "corresponding": true
+      },
+      {
+        "name": "Jay R. Winkler",
+        "corresponding": true
+      }
+    ],
+    "journal": "Proc. Natl. Acad. Sci. U. S. A.",
+    "year": 2024,
+    "doi": "10.1073/pnas.2402653121",
+    "volume": "121",
+    "issue": "20",
+    "pages": "e2402653121"
+  },
+  {
+    "number": 42,
+    "key": "lee2024moleculardynamics",
+    "title": "Molecular Dynamics Studies of Atomistically Determined Fibrillar Assemblies: Comparison of the Rippled ?-Sheet, Pleated ?-Sheet, and Herringbone Structures",
+    "authors": [
+      {
+        "name": "Hyeonju Lee"
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Jevgenij Raskatov"
+      },
+      {
+        "name": "Hyungjun Kim"
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      }
+    ],
+    "journal": "J. Phys. Chem. Lett.",
+    "year": 2024,
+    "doi": "10.1021/acs.jpclett.4c00101",
+    "volume": "15",
+    "pages": "4568-4574"
+  },
+  {
+    "number": 41,
+    "key": "yang2024howpermanent",
+    "title": "How Permanent are the Permanent Macrodipoles of Anthranilamide Bioinspired Molecular Electrets?",
+    "authors": [
+      {
+        "name": "Moon Young Yang",
+        "equal": true
+      },
+      {
+        "name": "Omar O'Mari",
+        "equal": true
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      },
+      {
+        "name": "Valentine I. Vullev",
+        "corresponding": true
+      }
+    ],
+    "journal": "J. Am. Chem. Soc.",
+    "year": 2024,
+    "doi": "10.1021/jacs.3c10525",
+    "volume": "146",
+    "issue": "8",
+    "pages": "5162-5172",
+    "note": "Selected as the front cover"
+  },
+  {
+    "number": 40,
+    "key": "li2024zndeposition",
+    "title": "The Zn deposition mechanism and pressure effects for aqueous Zn batteries: A combined theoretical and experimental study",
+    "authors": [
+      {
+        "name": "Yuyin Li"
+      },
+      {
+        "name": "Charles B. Musgrave"
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Minho M. Kim"
+      },
+      {
+        "name": "Kenang Zhang"
+      },
+      {
+        "name": "Mohsen Tamtaji"
+      },
+      {
+        "name": "Yuting Cai"
+      },
+      {
+        "name": "Tsz Wing Tang"
+      },
+      {
+        "name": "Jun Wang"
+      },
+      {
+        "name": "Bin Yuan",
+        "corresponding": true
+      },
+      {
+        "name": "William A. Goddard",
+        "corresponding": true
+      },
+      {
+        "name": "Zhengtang Luo",
+        "corresponding": true
+      }
+    ],
+    "journal": "Adv. Energy Mater.",
+    "year": 2024,
+    "doi": "10.1002/aenm.202303047",
+    "volume": "14",
+    "pages": "230347"
+  },
+  {
+    "number": 39,
+    "key": "vo2023fullyactivated",
+    "title": "Fully Activated Structure of the Sterol-Bound Smoothened GPCR-Gi Protein Complex",
+    "authors": [
+      {
+        "name": "Amy-Doan P. Vo"
+      },
+      {
+        "name": "Soo-Kyung Kim"
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Alison E. Ondrus"
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      }
+    ],
+    "journal": "Proc. Natl. Acad. Sci. U. S. A.",
+    "year": 2023,
+    "doi": "10.1073/pnas.2300919120",
+    "volume": "120",
+    "issue": "49",
+    "pages": "e2300919120"
+  },
+  {
+    "number": 38,
+    "key": "damore2023understandingionic",
+    "title": "Understanding Ionic Diffusion Mechanisms in Li2S Coatings for Solid-State Batteries: Development of a Tailored Reactive Force Field for Multiscale Simulations",
+    "authors": [
+      {
+        "name": "Maddalena D'Amore",
+        "corresponding": true
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Tridip Das"
+      },
+      {
+        "name": "Anna Maria Ferrari"
+      },
+      {
+        "name": "Kim Minho"
+      },
+      {
+        "name": "Mauro Sgroi"
+      },
+      {
+        "name": "Alessandro Fortunelli"
+      },
+      {
+        "name": "William A. Goddard III"
+      }
+    ],
+    "journal": "J. Phys. Chem. C",
+    "year": 2023,
+    "doi": "10.1021/acs.jpcc.3c04991",
+    "volume": "127",
+    "pages": "22880-22888"
+  },
+  {
+    "number": 37,
+    "key": "li2023structuremolecular",
+    "title": "Structure and Molecular Mechanism of Signaling for the Glucagon-like Peptide-1 Receptor Bound to Gs Protein and Exendin-P5 Biased Agonist",
+    "authors": [
+      {
+        "name": "Bo Li",
+        "equal": true
+      },
+      {
+        "name": "Krystyna Maruszko",
+        "equal": true
+      },
+      {
+        "name": "Soo-Kyung Kim",
+        "equal": true
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Amy-Doan Vo"
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      }
+    ],
+    "journal": "J. Am. Chem. Soc.",
+    "year": 2023,
+    "doi": "10.1021/jacs.3c05996",
+    "volume": "145",
+    "pages": "20422-20431"
+  },
+  {
+    "number": 36,
+    "key": "johnson2023nanoclustersuperstructures",
+    "title": "Nanocluster Superstructures Assembled via Surface Ligand Switching at High Temperature",
+    "authors": [
+      {
+        "name": "Grayson Johnson",
+        "equal": true
+      },
+      {
+        "name": "Moon Young Yang",
+        "equal": true
+      },
+      {
+        "name": "Chang Liu",
+        "equal": true
+      },
+      {
+        "name": "Hua Zhou"
+      },
+      {
+        "name": "Xiaobing Zuo"
+      },
+      {
+        "name": "Diane A. Dickie"
+      },
+      {
+        "name": "Sihan Wang"
+      },
+      {
+        "name": "Wenpei Gao"
+      },
+      {
+        "name": "Bukuru Anaclet"
+      },
+      {
+        "name": "Frédéric A. Perras"
+      },
+      {
+        "name": "Fuyan Ma"
+      },
+      {
+        "name": "Chenjie Zeng"
+      },
+      {
+        "name": "Da Wang"
+      },
+      {
+        "name": "Sara Bals"
+      },
+      {
+        "name": "Sheng Dai"
+      },
+      {
+        "name": "Zhen Xu"
+      },
+      {
+        "name": "Guoliang Liu"
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      },
+      {
+        "name": "Sen Zhang",
+        "corresponding": true
+      }
+    ],
+    "journal": "Nat. Synth.",
+    "year": 2023,
+    "doi": "10.1038/s44160-023-00304-8",
+    "volume": "2",
+    "pages": "828-837"
+  },
+  {
+    "number": 35,
+    "key": "jung2023discoverybinding",
+    "title": "Discovery and Binding Mechanism of Pyrazoloisoquinoline-Based Novel ?- Arrestin Inverse Agonists of the Kappa-Opioid Receptor",
+    "authors": [
+      {
+        "name": "Jae-Hoon Jung",
+        "equal": true
+      },
+      {
+        "name": "In Hee Jang",
+        "equal": true
+      },
+      {
+        "name": "Moon Young Yang",
+        "equal": true
+      },
+      {
+        "name": "Sunhong Kim"
+      },
+      {
+        "name": "Soo-Kyung Kim"
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      },
+      {
+        "name": "Yong-Chul Kim",
+        "corresponding": true
+      }
+    ],
+    "journal": "J. Med. Chem.",
+    "year": 2023,
+    "doi": "10.1021/acs.jmedchem.3c00064",
+    "volume": "66",
+    "issue": "7",
+    "pages": "5154-5170"
+  },
+  {
+    "number": 34,
+    "key": "morozov2023quantummechanics",
+    "title": "Quantum-Mechanics-Based Molecular Dynamics Simulations of the Structure and Performance of Sulfur-Enriched Li3PS4 Cathode",
+    "authors": [
+      {
+        "name": "Sergey I. Morozov"
+      },
+      {
+        "name": "Boris V. Merinov",
+        "corresponding": true
+      },
+      {
+        "name": "Tridip Das"
+      },
+      {
+        "name": "Sergey Zybin"
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      }
+    ],
+    "journal": "Cell Rep. Phys. Sci.",
+    "year": 2023,
+    "doi": "10.1016/j.xcrp.2023.101326",
+    "volume": "4",
+    "pages": "101326"
+  },
+  {
+    "number": 33,
+    "key": "yang2023characterizationsolid",
+    "title": "Characterization of the Solid Electrolyte Interphase at the Li Metal-Ionic Liquid Interface",
+    "authors": [
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Sergey V. Zybin"
+      },
+      {
+        "name": "Tridip Das"
+      },
+      {
+        "name": "Boris V. Merinov",
+        "corresponding": true
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      },
+      {
+        "name": "Eun Kyung Mok"
+      },
+      {
+        "name": "Hoe Jin Hah"
+      },
+      {
+        "name": "Hyea Eun Han"
+      },
+      {
+        "name": "Young Cheol Choi"
+      },
+      {
+        "name": "Seung Ha Kim"
+      }
+    ],
+    "journal": "Adv. Energy Mater.",
+    "year": 2023,
+    "doi": "10.1002/aenm.202202949",
+    "volume": "13",
+    "pages": "2202949"
+  },
+  {
+    "number": 32,
+    "key": "yang2022gprotein",
+    "title": "G Protein Coupling and Activation of the Metabotropic GABAB Heterodimer",
+    "authors": [
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Soo-Kyung Kim"
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      }
+    ],
+    "journal": "Nat. Commun.",
+    "year": 2022,
+    "doi": "10.1038/s41467-022-32213-3",
+    "volume": "13",
+    "pages": "4612"
+  },
+  {
+    "number": 31,
+    "key": "das2022structuraldynamic",
+    "title": "Structural, Dynamic, and Diffusion Properties of Li6(PS4)SCl Superionic Conductor from Molecular Dynamics Simulations; Prediction of a Dramatically Improved Conductor",
+    "authors": [
+      {
+        "name": "Tridip Das"
+      },
+      {
+        "name": "Boris V. Merinov",
+        "corresponding": true
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      }
+    ],
+    "journal": "J. Mater. Chem. A",
+    "year": 2022,
+    "doi": "10.1039/D2TA02715A",
+    "volume": "10",
+    "pages": "16319- 16327"
+  },
+  {
+    "number": 30,
+    "key": "yang2022transportproperties",
+    "title": "Transport Properties of Ionic Liquid Electrolytes from Molecular Dynamics Simulations",
+    "authors": [
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Boris V. Merinov",
+        "corresponding": true
+      },
+      {
+        "name": "Sergey V. Zybin"
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      },
+      {
+        "name": "Eun Kyung Mok"
+      },
+      {
+        "name": "Hoe Jin Hah"
+      },
+      {
+        "name": "Hyea Eun Han"
+      },
+      {
+        "name": "Young Cheol Choi"
+      },
+      {
+        "name": "Seung Ha Kim"
+      }
+    ],
+    "journal": "Electrochem. Sci. Adv.",
+    "year": 2022,
+    "doi": "10.1002/elsa.202100007",
+    "volume": "2",
+    "issue": "2",
+    "pages": "e2100007"
+  },
+  {
+    "number": 29,
+    "key": "shen2022strengtheningpolycrystalline",
+    "title": "Strengthening Polycrystalline Boron Carbide by Doping Si into Grain Boundaries",
+    "authors": [
+      {
+        "name": "Yidi Shen"
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      },
+      {
+        "name": "Qi An",
+        "corresponding": true
+      }
+    ],
+    "journal": "J. Am. Ceram. Soc.",
+    "year": 2022,
+    "doi": "10.1111/jace.18028",
+    "volume": "105",
+    "issue": "5",
+    "pages": "2978-2989"
+  },
+  {
+    "number": 28,
+    "key": "yang2021structuresagonist",
+    "title": "Structures and Agonist Binding Sites of Bitter Taste Receptor TAS2R5 Complexed with Gi Protein and Validated against Experiment",
+    "authors": [
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Soo-Kyung Kim"
+      },
+      {
+        "name": "Donghwa Kim"
+      },
+      {
+        "name": "Stephen B. Liggett"
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      }
+    ],
+    "journal": "J. Phys. Chem. Lett.",
+    "year": 2021,
+    "doi": "10.1021/acs.jpclett.1c02162",
+    "volume": "12",
+    "pages": "9293-9300"
+  },
+  {
+    "number": 27,
+    "key": "kim2021artificialtaste",
+    "title": "Artificial Taste Buds: Bioorthogonally Ligated Gustatory-Neuronal Multicellular Hybrids Enabling Intercellular Taste Signal Transmission",
+    "authors": [
+      {
+        "name": "Trang Huyen Le Kim"
+      },
+      {
+        "name": "Bon Il Koo"
+      },
+      {
+        "name": "Sung Duk Jo"
+      },
+      {
+        "name": "Nai-Wen Liang"
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "In Cho"
+      },
+      {
+        "name": "Jae-Byum Chang"
+      },
+      {
+        "name": "Tzu-Wei Wang"
+      },
+      {
+        "name": "Yoon Sung Nam",
+        "corresponding": true
+      }
+    ],
+    "journal": "ACS Biomater. Sci. Eng.",
+    "year": 2021,
+    "doi": "10.1021/acsbiomaterials.1c00247",
+    "volume": "7",
+    "issue": "8",
+    "pages": "3783-3792"
+  },
+  {
+    "number": 26,
+    "key": "yang2021predictedstructure",
+    "title": "Predicted Structure of Fully Activated Human Bitter Taste Receptor TAS2R4 Complexed with G Protein and Agonists",
+    "authors": [
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Amirhossein Mafi"
+      },
+      {
+        "name": "Soo-Kyung Kim"
+      },
+      {
+        "name": "William A. Goddard III",
+        "corresponding": true
+      },
+      {
+        "name": "Brian Guthrie"
+      }
+    ],
+    "journal": "QRB Discov.",
+    "year": 2021,
+    "doi": "10.1017/qrd.2021.1",
+    "volume": "2",
+    "pages": "e3, 1-8"
+  },
+  {
+    "number": 25,
+    "key": "koo2021proteininduced",
+    "title": "Protein-induced Metamorphosis of Unilamellar Lipid Vesicles to Multilamellar Hybrid Vesicles",
+    "authors": [
+      {
+        "name": "Bon Il Koo"
+      },
+      {
+        "name": "Inhye Kim"
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Sung Duk Jo"
+      },
+      {
+        "name": "Kunmo Koo"
+      },
+      {
+        "name": "Seo Yeon Shin"
+      },
+      {
+        "name": "Kyung Mok Park"
+      },
+      {
+        "name": "Jong Min Yuk"
+      },
+      {
+        "name": "Eunji Lee",
+        "corresponding": true
+      },
+      {
+        "name": "Yoon Sung Nam",
+        "corresponding": true
+      }
+    ],
+    "journal": "J. Control. Release",
+    "year": 2021,
+    "doi": "10.1016/j.jconrel.2021.01.004",
+    "volume": "331",
+    "issue": "10",
+    "pages": "187- 197"
+  },
+  {
+    "number": 24,
+    "key": "kim2021lightactivated",
+    "title": "Light-Activated Polydopamine Coatings for Efficient Metal Recovery from Electronic Waste",
+    "authors": [
+      {
+        "name": "Kyeong Rak Kim"
+      },
+      {
+        "name": "Jeonga Kim"
+      },
+      {
+        "name": "Jin Woong Kim"
+      },
+      {
+        "name": "Cafer T. Yavuz"
+      },
+      {
+        "name": "Moon Young Yang",
+        "corresponding": true
+      },
+      {
+        "name": "Yoon Sung Nam",
+        "corresponding": true
+      }
+    ],
+    "journal": "Sep. Purif. Technol.",
+    "year": 2021,
+    "doi": "10.1016/j.seppur.2020.117674",
+    "volume": "254",
+    "pages": "117674"
+  },
+  {
+    "number": 23,
+    "key": "park2019subnanomolar",
+    "title": "Sub- nanomolar FRET-based DNA Assay Using Thermally Stable Phosphorothioated DNA-functionalized Quantum Dots",
+    "authors": [
+      {
+        "name": "Jae Chul Park"
+      },
+      {
+        "name": "Se Yeon Choi"
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Lin Nan"
+      },
+      {
+        "name": "Hyebin Na"
+      },
+      {
+        "name": "Ha Neul Lee"
+      },
+      {
+        "name": "Hyun Jung Chung"
+      },
+      {
+        "name": "Cheol Am Hong",
+        "corresponding": true
+      },
+      {
+        "name": "Yoon Sung Nam",
+        "corresponding": true
+      }
+    ],
+    "journal": "ACS Appl. Mater. Interfaces",
+    "year": 2019,
+    "doi": "10.1021/acsami.9b07717",
+    "volume": "11",
+    "issue": "37",
+    "pages": "33525-33534"
+  },
+  {
+    "number": 22,
+    "key": "jun2019rutheniumplasmonic",
+    "title": "Ruthenium-based Plasmonic Hybrid Photocatalyst for Aqueous Carbon Dioxide Conversion with High Reaction Rate and Selectivity",
+    "authors": [
+      {
+        "name": "Hwiseok Jun"
+      },
+      {
+        "name": "Shinyoung Choi"
+      },
+      {
+        "name": "Moon Young Yang",
+        "corresponding": true
+      },
+      {
+        "name": "Yoon Sung Nam",
+        "corresponding": true
+      }
+    ],
+    "journal": "J. Mater. Chem. A",
+    "year": 2019,
+    "doi": "10.1039/C9TA05880J",
+    "volume": "7",
+    "pages": "17254-17260"
+  },
+  {
+    "number": 21,
+    "key": "lee2019nitrogendopant",
+    "title": "Nitrogen-dopant Induced Organic-Inorganic Hybrid Perovskite Crystal Growth on Carbon Nanotubes",
+    "authors": [
+      {
+        "name": "Gil Yong Lee"
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Dong-Ha Kim"
+      },
+      {
+        "name": "Joonwon Lim"
+      },
+      {
+        "name": "Jinwoo Byun"
+      },
+      {
+        "name": "Dong Sung Choi"
+      },
+      {
+        "name": "Ho Jin Lee"
+      },
+      {
+        "name": "Yoon Sung Nam"
+      },
+      {
+        "name": "Il-Doo Kim"
+      },
+      {
+        "name": "Sang Ouk Kim",
+        "corresponding": true
+      }
+    ],
+    "journal": "Adv. Funct. Mater.",
+    "year": 2019,
+    "doi": "10.1002/adfm.201902489",
+    "volume": "29",
+    "issue": "30",
+    "pages": "1902489"
+  },
+  {
+    "number": 20,
+    "key": "kim2019directednanoscale",
+    "title": "Directed Nanoscale Self-assembly of Natural Photosystems on Nitrogen-doped Carbon Nanotubes for Solar Energy Harvesting",
+    "authors": [
+      {
+        "name": "Insu Kim"
+      },
+      {
+        "name": "Nyeongbeen Jo"
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Jeonga Kim"
+      },
+      {
+        "name": "Hwiseok Jun"
+      },
+      {
+        "name": "Gil Yong Lee"
+      },
+      {
+        "name": "Taeho Shin"
+      },
+      {
+        "name": "Sang Ouk Kim"
+      },
+      {
+        "name": "Yoon Sung Nam",
+        "corresponding": true
+      }
+    ],
+    "journal": "ACS Appl. Bio Mater.",
+    "year": 2019,
+    "doi": "10.1021/acsabm.9b00120",
+    "volume": "2",
+    "issue": "5",
+    "pages": "2109-2115"
+  },
+  {
+    "number": 19,
+    "key": "lee2019goldbinding",
+    "title": "Gold Binding Peptide Identified from Microfluidic Biopanning: An Experimental and Molecular Dynamics Study",
+    "authors": [
+      {
+        "name": "Dong Jae Lee"
+      },
+      {
+        "name": "Hyun Su Park"
+      },
+      {
+        "name": "Kunmo Koo"
+      },
+      {
+        "name": "Jeong Yong Lee"
+      },
+      {
+        "name": "Yoon Sung Nam"
+      },
+      {
+        "name": "Wonhee Lee",
+        "corresponding": true
+      },
+      {
+        "name": "Moon Young Yang",
+        "corresponding": true
+      }
+    ],
+    "journal": "Langmuir",
+    "year": 2019,
+    "doi": "10.1021/acs.langmuir.8b02563",
+    "volume": "35",
+    "issue": "2",
+    "pages": "522-528"
+  },
+  {
+    "number": 18,
+    "key": "seah2018lowpower",
+    "title": "Low- power and Low-drug-dose Photodynamic Chemotherapy via the Breakdown of Tumor-targeted Micelles by Reactive Oxygen Species",
+    "authors": [
+      {
+        "name": "Geok Leng Seah"
+      },
+      {
+        "name": "Jeong Heon Yu"
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Woo Jin Kim"
+      },
+      {
+        "name": "Jin-Ho Kim"
+      },
+      {
+        "name": "Keunchil Park"
+      },
+      {
+        "name": "Jae-Woo Cho"
+      },
+      {
+        "name": "Jee Seon Kim",
+        "corresponding": true
+      },
+      {
+        "name": "Yoon Sung Nam",
+        "corresponding": true
+      }
+    ],
+    "journal": "J. Control. Release",
+    "year": 2018,
+    "doi": "10.1016/j.jconrel.2018.07.046",
+    "volume": "286",
+    "pages": "240-253"
+  },
+  {
+    "number": 17,
+    "key": "kim2017virustemplated",
+    "title": "Virus-templated Self- mineralization of Ligand-free Colloidal Palladium Nanostructures for High Surface Activity and Stability",
+    "authors": [
+      {
+        "name": "Insu Kim",
+        "equal": true
+      },
+      {
+        "name": "Kyungnam Kang",
+        "equal": true
+      },
+      {
+        "name": "Mi Hwa Oh"
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Inkyu Park",
+        "corresponding": true
+      },
+      {
+        "name": "Yoon Sung Nam",
+        "corresponding": true
+      }
+    ],
+    "journal": "Adv. Funct. Mater.",
+    "year": 2017,
+    "doi": "10.1002/adfm.201703262",
+    "volume": "27",
+    "issue": "48",
+    "pages": "1703262"
+  },
+  {
+    "number": 16,
+    "key": "kim2017polyglycerolatednanocarriers",
+    "title": "Polyglycerolated Nanocarriers with Increased Ligand Multivalency for Enhanced in vivo Therapeutic Efficacy of Paclitaxel",
+    "authors": [
+      {
+        "name": "Trang Huyen Le Kim",
+        "equal": true
+      },
+      {
+        "name": "Jeong Heon Yu",
+        "equal": true
+      },
+      {
+        "name": "Hwiseok Jun",
+        "equal": true
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Mi- Jin Yang"
+      },
+      {
+        "name": "Jae-Woo Cho"
+      },
+      {
+        "name": "Jin Woong Kim",
+        "corresponding": true
+      },
+      {
+        "name": "Jee Seon Kim",
+        "corresponding": true
+      },
+      {
+        "name": "Yoon Sung Nam",
+        "corresponding": true
+      }
+    ],
+    "journal": "Biomater.",
+    "year": 2017,
+    "doi": "10.1016/j.biomaterials.2017.08.042",
+    "volume": "145",
+    "pages": "223-232"
+  },
+  {
+    "number": 15,
+    "key": "yang2017roleordered",
+    "title": "Role of Ordered Ni Atoms in Li Layers for Li-Rich Layered Cathode Materials",
+    "authors": [
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Sangryun Kim"
+      },
+      {
+        "name": "Kyungsu Kim"
+      },
+      {
+        "name": "Woosuk Cho"
+      },
+      {
+        "name": "Jang Wook Choi"
+      },
+      {
+        "name": "Yoon Sung Nam",
+        "corresponding": true
+      }
+    ],
+    "journal": "Adv. Funct. Mater.",
+    "year": 2017,
+    "doi": "10.1002/adfm.201700982",
+    "volume": "27",
+    "issue": "35",
+    "pages": "1700982"
+  },
+  {
+    "number": 14,
+    "key": "lee2017spontaneouslinker",
+    "title": "Spontaneous Linker-Free Binding of Polyoxometalates on N-dopant Sites in Graphene Plane for Efficient Water Oxidation",
+    "authors": [
+      {
+        "name": "Gil Yong Lee",
+        "equal": true
+      },
+      {
+        "name": "Insu Kim",
+        "equal": true
+      },
+      {
+        "name": "Joonwon Lim"
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Dong Sung Choi"
+      },
+      {
+        "name": "Yujin Gu"
+      },
+      {
+        "name": "Youngtak Oh"
+      },
+      {
+        "name": "Seok Hun Kang"
+      },
+      {
+        "name": "Yoon Sung Nam",
+        "corresponding": true
+      },
+      {
+        "name": "Sang Ouk Kim",
+        "corresponding": true
+      }
+    ],
+    "journal": "J. Mater. Chem. A",
+    "year": 2017,
+    "doi": "10.1039/C6TA09306J",
+    "volume": "5",
+    "issue": "5",
+    "pages": "1941-1947"
+  },
+  {
+    "number": 13,
+    "key": "kim2015bioinspireddesign",
+    "title": "Bioinspired Design of an Immobilization Interface for Highly Stable, Recyclable Nanosized Catalysts",
+    "authors": [
+      {
+        "name": "Insu Kim",
+        "equal": true
+      },
+      {
+        "name": "Ho Yeon Son",
+        "equal": true
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Yoon Sung Nam",
+        "corresponding": true
+      }
+    ],
+    "journal": "ACS Appl. Mater. Interfaces",
+    "year": 2015,
+    "doi": "10.1021/acsami.5b03249",
+    "volume": "7",
+    "issue": "26",
+    "pages": "14415-14422"
+  },
+  {
+    "number": 12,
+    "key": "yang2014rolenitrogen",
+    "title": "Role of Nitrogen Incorporation into Al2O3-based Resistive Random-Access-Memory",
+    "authors": [
+      {
+        "name": "Moon Young Yang",
+        "corresponding": true
+      },
+      {
+        "name": "Katsumasa Kamiya"
+      },
+      {
+        "name": "Hiroki Shirakawa"
+      },
+      {
+        "name": "Blanka Magyari- Köpe"
+      },
+      {
+        "name": "Yoshio Nishi"
+      },
+      {
+        "name": "Kenji Shiraishi"
+      }
+    ],
+    "journal": "Appl. Phys. Express",
+    "year": 2014,
+    "doi": "10.7567/APEX.7.074202",
+    "volume": "7",
+    "issue": "7",
+    "pages": "074202"
+  },
+  {
+    "number": 11,
+    "key": "hiramatsu2014firstprinciples",
+    "title": "First-principles evaluation of penetration energy of metal atom into Si substrate",
+    "authors": [
+      {
+        "name": "Tomoki Hiramatsu",
+        "corresponding": true
+      },
+      {
+        "name": "Takashi Yamauchi"
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Katsumasa Kamiya"
+      },
+      {
+        "name": "Kenji Shiraishi"
+      },
+      {
+        "name": "Takashi Nakayama",
+        "corresponding": true
+      }
+    ],
+    "journal": "Jpn. J. Appl. Phys.",
+    "year": 2014,
+    "doi": "10.7567/JJAP.53.058006",
+    "volume": "53",
+    "issue": "5",
+    "pages": "058006"
+  },
+  {
+    "number": 10,
+    "key": "hanaoka2013substratemediated",
+    "title": "Substrate mediated proton relay mechanism for the religation reaction in topoisomerase II",
+    "authors": [
+      {
+        "name": "Kyohei Hanaoka",
+        "corresponding": true
+      },
+      {
+        "name": "Mitsuo Shoji"
+      },
+      {
+        "name": "Daiki Kondo"
+      },
+      {
+        "name": "Akimasa Sato"
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Katsumasa Kamiya"
+      },
+      {
+        "name": "Kenji Shiraishi"
+      }
+    ],
+    "journal": "J. Biomol. Struct. Dyn.",
+    "year": 2013,
+    "doi": "10.1080/07391102.2013.834848",
+    "volume": "32",
+    "issue": "11",
+    "pages": "1759-1765"
+  },
+  {
+    "number": 9,
+    "key": "yang2013chargedependent",
+    "title": "Charge-dependent oxygen vacancy diffusion in Al2O3-based resistive-random-access-memories",
+    "authors": [
+      {
+        "name": "Moon Young Yang",
+        "corresponding": true
+      },
+      {
+        "name": "Katsumasa Kamiya"
+      },
+      {
+        "name": "Blanka Magyari-Köpe"
+      },
+      {
+        "name": "Masaaki Niwa"
+      },
+      {
+        "name": "Yoshio Nishi"
+      },
+      {
+        "name": "Kenji Shiraishi"
+      }
+    ],
+    "journal": "Appl. Phys. Lett.",
+    "year": 2013,
+    "doi": "10.1063/1.4819772",
+    "volume": "103",
+    "issue": "9",
+    "pages": "093504"
+  },
+  {
+    "number": 8,
+    "key": "yang2013physicalguiding",
+    "title": "Physical guiding principles for high quality resistive random access memory stack with Al2O3 insertion layer",
+    "authors": [
+      {
+        "name": "Moon Young Yang",
+        "corresponding": true
+      },
+      {
+        "name": "Katsumasa Kamiya"
+      },
+      {
+        "name": "Blanka Magyari-Köpe"
+      },
+      {
+        "name": "Hiroyoshi Momida"
+      },
+      {
+        "name": "Takahisa Ohno"
+      },
+      {
+        "name": "Masaaki Niwa"
+      },
+      {
+        "name": "Yoshio Nishi"
+      },
+      {
+        "name": "Kenji Shiraishi"
+      }
+    ],
+    "journal": "Jpn J. Appl. Phys.",
+    "year": 2013,
+    "doi": "10.7567/JJAP.52.04CD11",
+    "volume": "52",
+    "issue": "4S",
+    "pages": "04CD11"
+  },
+  {
+    "number": 7,
+    "key": "kamiya2013generalizedmechanism",
+    "title": "Generalized mechanism of the resistance switching in binary-oxide-based resistive random-access memories",
+    "authors": [
+      {
+        "name": "Katsumasa Kamiya",
+        "corresponding": true
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Takahiro Nagata"
+      },
+      {
+        "name": "Seong-Geon Park"
+      },
+      {
+        "name": "Blanka Magyari-Köpe"
+      },
+      {
+        "name": "Toyohiro Chikyow"
+      },
+      {
+        "name": "Keisaku Yamada"
+      },
+      {
+        "name": "Masaaki Niwa"
+      },
+      {
+        "name": "Yoshio Nishi"
+      },
+      {
+        "name": "Kenji Shiraishi"
+      }
+    ],
+    "journal": "Phys. Rev. B",
+    "year": 2013,
+    "doi": "10.1103/PhysRevB.87.155201",
+    "volume": "87",
+    "issue": "15",
+    "pages": "155201"
+  },
+  {
+    "number": 6,
+    "key": "yang2013energeticselectron",
+    "title": "Energetics and electron states of Au/Ag incorporated into crystalline/amorphous silicon",
+    "authors": [
+      {
+        "name": "Moon Young Yang",
+        "corresponding": true
+      },
+      {
+        "name": "Katsumasa Kamiya"
+      },
+      {
+        "name": "Takashi Yamauchi"
+      },
+      {
+        "name": "Takashi Nakayama"
+      },
+      {
+        "name": "Kenji Shiraishi"
+      }
+    ],
+    "journal": "J. Appl. Phys.",
+    "year": 2013,
+    "doi": "10.1063/1.4817432",
+    "volume": "114",
+    "issue": "6",
+    "pages": "063701"
+  },
+  {
+    "number": 5,
+    "key": "yang2013interstitialoxygen",
+    "title": "Interstitial Oxygen Induced Fermi Level Pinning in the Al2O3-based High-k MISFET with Heavy-doped n-type Poly-Si Gates",
+    "authors": [
+      {
+        "name": "Moon Young Yang",
+        "corresponding": true
+      },
+      {
+        "name": "Katsumasa Kamiya"
+      },
+      {
+        "name": "Kenji Shiraishi"
+      }
+    ],
+    "journal": "AIP Adv.",
+    "year": 2013,
+    "doi": "10.1063/1.4825071",
+    "volume": "3",
+    "issue": "10",
+    "pages": "102113"
+  },
+  {
+    "number": 4,
+    "key": "shoji2013calculationelectron",
+    "title": "Calculation of the Electron Transfer Coupling Matrix Element in Diabatic Reactions",
+    "authors": [
+      {
+        "name": "Mitsuo Shoji",
+        "corresponding": true
+      },
+      {
+        "name": "Kyohei Hanaoka"
+      },
+      {
+        "name": "Akimasa Sato"
+      },
+      {
+        "name": "Daiki Kondo"
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Katsumasa Kamiya"
+      },
+      {
+        "name": "Kenji Shiraishi"
+      }
+    ],
+    "journal": "Int. J. Quantum Chem.",
+    "year": 2013,
+    "doi": "10.1002/qua.24074",
+    "volume": "113",
+    "issue": "3",
+    "pages": "342-347"
+  },
+  {
+    "number": 3,
+    "key": "kamiya2013vacancycohesion",
+    "title": "Vacancy Cohesion-Isolation Phase Transition upon Charge Injection and Removal in Binary Oxide-Based RRAM Filamentary-Type Switching",
+    "authors": [
+      {
+        "name": "Katsumasa Kamiya",
+        "corresponding": true
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Blanka Magyari-Köpe"
+      },
+      {
+        "name": "Masaaki Niwa"
+      },
+      {
+        "name": "Yoshio Nishi"
+      },
+      {
+        "name": "Kenji Shiraishi"
+      }
+    ],
+    "journal": "IEEE Trans. Electron Devices",
+    "year": 2013,
+    "doi": "10.1109/TED.2013.2279397",
+    "volume": "60",
+    "issue": "10",
+    "pages": "3400-3406"
+  },
+  {
+    "number": 2,
+    "key": "yamauchi2012theoreticalstudy",
+    "title": "Theoretical study of Si-based ionic switch",
+    "authors": [
+      {
+        "name": "Takashi Yamauchi",
+        "corresponding": true
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Katsumasa Kamiya"
+      },
+      {
+        "name": "Kenji Shiraishi"
+      },
+      {
+        "name": "Takashi Nakayama"
+      }
+    ],
+    "journal": "Appl. Phys. Lett.",
+    "year": 2012,
+    "doi": "10.1063/1.4718758",
+    "volume": "100",
+    "issue": "20",
+    "pages": "203506"
+  },
+  {
+    "number": 1,
+    "key": "kamiya2012offswitching",
+    "title": "ON-OFF switching mechanism of resistive-random-access-memories based on the formation and disruption of oxygen vacancy conducting channels",
+    "authors": [
+      {
+        "name": "Katsumasa Kamiya",
+        "corresponding": true
+      },
+      {
+        "name": "Moon Young Yang"
+      },
+      {
+        "name": "Seong-Geon Park"
+      },
+      {
+        "name": "Blanka Magyari- Köpe"
+      },
+      {
+        "name": "Yoshio Nishi"
+      },
+      {
+        "name": "Masaaki Niwa"
+      },
+      {
+        "name": "Kenji Shiraishi"
+      }
+    ],
+    "journal": "Appl. Phys. Lett.",
+    "year": 2012,
+    "doi": "10.1063/1.3685222",
+    "volume": "100",
+    "issue": "7",
+    "pages": "073502"
+  }
+]
