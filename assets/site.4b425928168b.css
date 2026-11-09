@@ -26,6 +26,9 @@
 :where(body.page-people) .portrait, :where(body.page-people) .person-photo {width:150px}
 :where(body.page-people) .person-info {padding:0}}
 
+/* Use the modern Korean system sans-serif without changing the English name. */
+:where(body.page-people) .person-info h2 .korean-name {font-family:"Pretendard","Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-size:.82em;font-weight:500;letter-spacing:-.025em;white-space:nowrap}
+
 :where(body.page-publications) .page-header {
       padding: 72px 7vw 36px;
       background: linear-gradient(120deg, #ffffff 0%, #f6fbff 100%);

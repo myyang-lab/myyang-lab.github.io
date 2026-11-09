@@ -15,28 +15,28 @@
     "journal_label": "Nature Synthesis"
   },
   {
-    "number": 55,
-    "title": "An Atomically Precise Alloy AgCu Cuboid Nanocluster with a Cubic Core",
-    "journal_label": "Materials Horizons"
+    "number": 58,
+    "title": "Mechanistic Transformation of CuI Nanoparticles into Oxidation-Resistant 2D Copper Nanoplates",
+    "journal_label": "Small"
   },
   {
-    "number": 51,
-    "title": "Metabotropic GABAB Receptor Activation Induced by G Protein Coupling",
-    "journal_label": "JACS"
+    "number": 32,
+    "title": "G Protein Coupling and Activation of the Metabotropic GABAB Heterodimer",
+    "journal_label": "Nature Communications"
   },
   {
-    "number": 46,
-    "title": "How Permanent Are the Permanent Macrodipoles of Anthranilamide Bioinspired Molecular Electrets?",
-    "journal_label": "JACS"
+    "number": 43,
+    "title": "Copper(II) Coordination to the Intrinsically Disordered Region of SARS-CoV-2 Nsp1",
+    "journal_label": "Proceedings of the National Academy of Sciences of the United States of America"
+  },
+  {
+    "number": 41,
+    "title": "How Permanent are the Permanent Macrodipoles of Anthranilamide Bioinspired Molecular Electrets?",
+    "journal_label": "Journal of the American Chemical Society"
   },
   {
     "number": 38,
-    "title": "Understanding Ionic Diffusion Mechanisms in Li₂S Coatings for Solid-State Batteries",
-    "journal_label": "Journal of Physical Chemistry C"
-  },
-  {
-    "number": 34,
-    "title": "Quantum-Mechanics-Based Molecular Dynamics Simulations of Sulfur-Enriched Li₃PS₄ Cathode",
-    "journal_label": "Cell Reports Physical Science"
+    "title": "Understanding Ionic Diffusion Mechanisms in Li₂S Coatings for Solid-State Batteries: Development of a Tailored Reactive Force Field for Multiscale Simulations",
+    "journal_label": "The Journal of Physical Chemistry C"
   }
 ]
