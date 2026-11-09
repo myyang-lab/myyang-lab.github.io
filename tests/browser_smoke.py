@@ -50,6 +50,15 @@ def main():
                     assert page.locator('.nav-links a[aria-current="page"]').count() == 1, name
                     assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'), f'Horizontal overflow: {name} @ {width}'
                     assert page.locator('img').evaluate_all('images => images.every(image => image.naturalWidth > 0)'), name
+                    if name == 'research':
+                        geometry = page.locator('.research-section').evaluate_all("sections => sections.map(s => Object.fromEntries(['.wrap','.research-heading','.research-description','.research-copy','.research-art'].map(k => [k, s.querySelector(k).getBoundingClientRect().toJSON()])))")
+                        for index, area in enumerate(geometry):
+                            assert abs(area['.research-heading']['x'] - area['.wrap']['x']) < 1
+                            assert abs(area['.research-description']['width'] - area['.wrap']['width']) < 1
+                            assert area['.research-art']['y'] >= area['.research-description']['bottom']
+                            if width > 650:
+                                assert (area['.research-copy']['x'] < area['.research-art']['x']) == (index % 2 == 0)
+                                assert abs(area['.research-art']['height'] - area['.research-copy']['height']) < 1
                     button, menu = page.locator('.menu-toggle'), page.locator('#primary-navigation')
                     if width <= 730:
                         assert button.is_visible() and not menu.is_visible(), (name, width)
