@@ -97,6 +97,10 @@ section.block { padding: 76px 0; }
 .research-art.nano { background: linear-gradient(125deg,#1a264c,#4b4a95); }
 .research-art.bio { background: linear-gradient(125deg,#0e3850,#177d7c); }
 .research-art.model { background: linear-gradient(125deg,#152c56,#3d5699); }
+.research-art.research-figure { min-height: 0; margin: 0; background: #fff; border: 1px solid var(--line); border-radius: 12px; }
+.research-art.research-figure::before, .research-art.research-figure::after { content: none; }
+.research-figure a { display: block; }
+.research-figure img { display: block; width: 100%; height: auto; }
 .pubmini { margin-top: 26px; border-top: 1px solid var(--line); padding-top: 16px; }
 .pubmini .pubitem { font-size: .9rem; margin: 12px 0; color: var(--muted); }
 .pubmini .pubitem strong { color: var(--navy); }
