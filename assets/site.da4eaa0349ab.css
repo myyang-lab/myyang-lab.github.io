@@ -261,6 +261,13 @@ section.block { padding: 76px 0; }
 .research-art.research-figure::before, .research-art.research-figure::after { content: none; }
 .research-figure a { display: block; }
 .research-figure img { display: block; width: 100%; height: auto; }
+/* Area 01: start the figure alongside the description, below the heading. */
+.research-layout--figure { align-items: start; row-gap: 0; }
+.research-layout--figure .research-copy { display: contents; }
+.research-layout--figure .research-heading { grid-column: 1; grid-row: 1; }
+.research-layout--figure .research-details { grid-column: 1; grid-row: 2; }
+.research-layout--figure .pubmini { grid-column: 1; grid-row: 3; }
+.research-layout--figure .research-figure { grid-column: 2; grid-row: 2; }
 .pubmini { margin-top: 26px; border-top: 1px solid var(--line); padding-top: 16px; }
 .pubmini .pubitem { font-size: .9rem; margin: 12px 0; color: var(--muted); }
 .pubmini .pubitem strong { color: var(--navy); }
@@ -318,6 +325,8 @@ section.block { padding: 76px 0; }
   .hero { min-height: calc(100svh - 62px); background-position: 62% center; }
   .hero-inner { padding: 90px 0; }
   .research-art { min-height: 230px; }
+  .research-layout--figure .research-copy { display: block; }
+  .research-layout--figure .research-figure { grid-column: auto; grid-row: auto; margin-top: 26px; }
   .section-kicker { align-items: start; }
   .contact-home-grid { grid-template-columns: 1fr; gap: 18px; }
   .intro-ko { margin-top: -20px; }

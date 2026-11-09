@@ -213,6 +213,8 @@ def build_outputs():
     css_path = f'assets/site.{hashlib.sha256(css.encode()).hexdigest()[:12]}.css'
     js_path = f'assets/site.{hashlib.sha256(js.encode()).hexdigest()[:12]}.js'
     values = {key: escape(value) for key, value in site.items()}
+    figure = ROOT / "assets/images/research_area1.png"
+    values["area1_figure_url"] = "assets/images/research_area1.png?v=" + hashlib.sha256(figure.read_bytes()).hexdigest()[:12]
     values.update(stylesheets=f'<link href="{css_path}" rel="stylesheet"/>',
                   scripts=f'<script src="{js_path}" defer></script>', gallery=render_gallery(gallery),
                   publications=render_publications(papers), news=render_news(news), latest_news=render_news(news, True))
