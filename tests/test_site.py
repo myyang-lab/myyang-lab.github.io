@@ -99,6 +99,15 @@ class SiteTests(unittest.TestCase):
         self.assertIn('note = {Accepted}', build.render_bibtex([papers[63]]))
         self.assertEqual(len(self.papers), len(re.findall(r'@article\{', self.outputs['papers.bib'].decode())))
 
+    def test_research_papers_open_doi_in_new_tab_with_spacing(self):
+        research = self.outputs['research.html'].decode()
+        by_number = {p['number']: p for p in self.papers}
+        for ref in build.load('research-papers'):
+            doi = by_number[ref['number']]['doi']
+            self.assertIn(f'href="https://doi.org/{doi}" target="_blank" rel="noopener noreferrer"', research)
+        self.assertEqual(research.count('</strong></a> <span>'), len(build.load('research-papers')))
+        self.assertNotIn('publications.html#paper-', research)
+
     def test_new_content_renders_without_editing_html(self):
         paper = copy.deepcopy(self.papers[0])
         paper.update(number=max(p['number'] for p in self.papers) + 1, key='newAcceptedPaper', doi=None, title='New <paper> & research')

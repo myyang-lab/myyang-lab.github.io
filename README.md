@@ -74,7 +74,7 @@ tests/              데이터·링크·캐시 무효화·브라우저 검증
 - `equal: true`는 †, `corresponding: true`는 *를 표시합니다. Moon Young Yang 이름은 자동으로 굵게 표시합니다.
 - 선택 항목 `note`는 표지 논문 등 부가 설명입니다.
 - 제목·저자명에는 HTML 태그 대신 일반 텍스트와 Unicode 화학식·문자를 사용합니다. 출력 시 안전하게 이스케이프합니다.
-- `research-papers.json`은 Research의 기존 짧은 소개 제목을 보존하는 편집 목록입니다. `number`로 논문을 연결하며 연도는 논문 원본에서 가져옵니다. 목록 항목에 해당하는 `{{ research_paper_번호 }}`를 Research 템플릿에 배치합니다. 링크는 Publications의 안정적인 `#paper-번호`로 연결됩니다.
+- `research-papers.json`은 Research의 기존 짧은 소개 제목을 보존하는 편집 목록입니다. `number`로 논문을 연결하며 연도는 논문 원본에서 가져옵니다. 목록 항목에 해당하는 `{{ research_paper_번호 }}`를 Research 템플릿에 배치합니다. 대표논문 제목은 DOI 논문 페이지를 새 탭에서 엽니다. 대표논문으로 선택하는 항목에는 `doi`가 있어야 합니다.
 
 현재 데이터는 기존 HTML을 기준으로 옮겼습니다. 60번은 **2073–2093**, 62번은 **Mingyang Liu 포함**, 63번은 **Accepted·연도 미지정**입니다. DOI와 기존 BibTeX 키는 유지했습니다. 논문 사실관계는 외부 자료로 임의 수정하지 않았습니다.
 
@@ -119,3 +119,7 @@ python3 tests/browser_smoke.py
 ```
 
 검증은 자체 임시 로컬 서버를 실행합니다. 8개 페이지의 11개 화면 폭(320~1440px), 메뉴 클릭·키보드·화면 크기 전환, 가로 넘침, 이미지 로딩, 논문 표시, 기존 Join 주소 이동을 확인합니다. 실행 환경이 로컬 소켓을 제한하면 해당 환경의 지원되는 권한 실행 방법을 사용합니다.
+
+## 학교 도메인 진행 사항
+
+`myyang.dgist.ac.kr`은 학교에서 리디렉션 방식으로 할당 진행 중입니다. 현재 운영 주소는 `https://myyang-lab.github.io/`로 유지합니다. 학교 측 리디렉션은 이 운영 주소로 연결하며, GitHub Pages의 Custom domain이나 CNAME은 변경하지 않습니다. 학교 설정 완료 후 실제 리디렉션과 HTTPS 접속을 확인합니다.

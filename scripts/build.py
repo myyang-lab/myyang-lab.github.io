@@ -86,6 +86,8 @@ def validate(publications, gallery, news, references):
     for ref in references:
         if ref['number'] not in numbers:
             raise ValueError(f'Unknown representative paper: {ref["number"]}')
+        if not next(p for p in publications if p['number'] == ref['number']).get('doi'):
+            raise ValueError(f'Representative paper needs a DOI: {ref["number"]}')
 
 
 def navigation(page):
@@ -217,9 +219,9 @@ def build_outputs():
     by_number = {p['number']: p for p in papers}
     for ref in refs:
         paper = by_number[ref['number']]
-        # Research keeps its editorial short title, and links to the canonical numbered record.
+        # Research keeps its editorial short title and opens the DOI in a new tab.
         label = escape(ref['journal_label']) + (f' ({paper["year"]})' if paper.get('year') else ' (Accepted)')
-        values[f'research_paper_{paper["number"]}'] = f'<div class="pubitem"><a href="publications.html#paper-{paper["number"]}"><strong>{escape(ref["title"])}</strong></a><span>{label}</span></div>'
+        values[f'research_paper_{paper["number"]}'] = f'<div class="pubitem"><a href="https://doi.org/{escape(paper["doi"])}" target="_blank" rel="noopener noreferrer"><strong>{escape(ref["title"])}</strong></a> <span>{label}</span></div>'
     outputs = {css_path: css.encode(), js_path: js.encode(), 'papers.bib': render_bibtex(papers).encode(), '.nojekyll': b''}
     for template in sorted((ROOT / 'src/pages').glob('*.html')):
         context = {**values, 'navigation': navigation(template.stem)}
