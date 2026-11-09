@@ -213,7 +213,7 @@ def build_outputs():
     css_path = f'assets/site.{hashlib.sha256(css.encode()).hexdigest()[:12]}.css'
     js_path = f'assets/site.{hashlib.sha256(js.encode()).hexdigest()[:12]}.js'
     values = {key: escape(value) for key, value in site.items()}
-    for area in (1, 2):
+    for area in (1, 2, 3, 4):
         image_path = f"assets/images/research_area{area}.png"
         figure = ROOT / image_path
         values[f"area{area}_figure_url"] = image_path + "?v=" + hashlib.sha256(figure.read_bytes()).hexdigest()[:12]
