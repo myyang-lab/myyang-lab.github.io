@@ -105,7 +105,7 @@ def render_gallery(items):
         day = date.fromisoformat(item['date'])
         label = f'{MONTHS[day.month - 1]} {day.day}, {day.year}'
         cards.append(f'''<figure class="gallery-card">
-  <a aria-label="View photo: {escape(item['caption'])}" href="{escape(item.get('original', item['image']))}">
+  <a data-image-viewer aria-haspopup="dialog" aria-label="Enlarge photo: {escape(item['caption'])}" href="{escape(item.get('original', item['image']))}">
     <img alt="{escape(item['alt'])}" loading="lazy" decoding="async" src="{escape(item['image'])}" width="{item['width']}" height="{item['height']}"/>
   </a>
   <figcaption><time datetime="{item['date']}">{label}</time><p>{escape(item['caption'])}</p></figcaption>

@@ -336,3 +336,13 @@ section.block { padding: 76px 0; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
 }
+
+
+/* Shared in-page enlargement; native dialog keeps keyboard focus inside. */
+[data-image-viewer] { cursor: zoom-in; }
+.image-viewer { width: 100vw; max-width: none; height: 100dvh; max-height: none; margin: 0; padding: 64px 24px; border: 0; background: rgba(5,15,30,.94); color: #fff; overflow: hidden; cursor: zoom-out; }
+.image-viewer[open] { display: grid; place-items: center; }
+.image-viewer::backdrop { background: transparent; }
+.image-viewer-image { display: block; width: auto; height: auto; max-width: 100%; max-height: calc(100dvh - 128px); object-fit: contain; background: #fff; }
+.image-viewer-close { position: fixed; top: 12px; right: 16px; width: 44px; height: 44px; border: 1px solid #ffffff66; border-radius: 50%; background: #14243a; color: #fff; font-size: 2rem; line-height: 1; cursor: pointer; }
+.image-viewer-hint { position: fixed; left: 16px; right: 16px; bottom: 14px; margin: 0; text-align: center; font-size: .85rem; color: #e3ebf4; }

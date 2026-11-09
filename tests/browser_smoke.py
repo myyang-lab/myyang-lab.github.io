@@ -88,6 +88,42 @@ def main():
                     metrics[f'{name}-{width}'] = page.evaluate('''() => {const out={}; for(const s of ['.nav','.nav-inner','.logo','.brand-primary','.brand-secondary','.nav-links','h1','.hero','.direction','.pagehead','.page-hero','.page-header','.person-card','.pub','.gallery-card','.footer','.footer-inner']){const el=document.querySelector(s);if(!el)continue; const c=getComputedStyle(el);out[s]={rect:JSON.parse(JSON.stringify(el.getBoundingClientRect())),css:Object.fromEntries(['fontFamily','fontSize','lineHeight','color','backgroundColor','padding','margin','display','flexDirection','gap','width','maxWidth','borderRadius'].map(k=>[k,c[k]]))};}return out;}''')
                     if args.screenshots and width in [1440, 390]:
                         page.screenshot(path=str(args.screenshots / f'{name}-{width}.png'), full_page=True)
+            # Enlargements stay in the same page, close by pointer/keyboard, and restore focus.
+            for name in ['gallery', 'research']:
+                for width in [1440, 390]:
+                    page.set_viewport_size({'width': width, 'height': 900})
+                    page.goto(f'http://127.0.0.1:{server.server_port}/{name}.html')
+                    original_url = page.url
+                    triggers = page.locator('[data-image-viewer]')
+                    assert triggers.count() == (4 if name == 'research' else len(json.loads((ROOT / 'data/gallery.json').read_text())))
+                    for index in range(triggers.count()):
+                        trigger = triggers.nth(index)
+                        trigger.scroll_into_view_if_needed()
+                        trigger.focus()
+                        page.keyboard.press('Enter')
+                        viewer = page.locator('dialog.image-viewer')
+                        expect(viewer).to_be_visible()
+                        image = viewer.locator('img')
+                        image.evaluate('i => i.decode()')
+                        assert image.evaluate('i => i.naturalWidth > 0')
+                        assert image.get_attribute('alt') == trigger.locator('img').get_attribute('alt')
+                        assert page.url == original_url and len(page.context.pages) == 1
+                        assert page.evaluate("document.documentElement.style.overflow === 'hidden'")
+                        box = image.bounding_box()
+                        assert box['x'] >= 0 and box['x'] + box['width'] <= width + 1
+                        assert box['y'] >= 0 and box['y'] + box['height'] <= 901
+                        if index % 4 == 0:
+                            image.click()
+                        elif index % 4 == 1:
+                            page.keyboard.press('Escape')
+                        elif index % 4 == 2:
+                            viewer.get_by_role('button', name='Close enlarged image').click()
+                        else:
+                            page.mouse.click(3, 100)
+                        expect(viewer).to_have_count(0)
+                        expect(trigger).to_be_focused()
+                        assert page.evaluate("document.documentElement.style.overflow !== 'hidden'")
+                        assert page.url == original_url and len(page.context.pages) == 1
             page.goto(f'http://127.0.0.1:{server.server_port}/publications.html')
             assert page.locator('article.pub').count() == len(json.loads((ROOT / 'data/publications.json').read_text()))
             assert '2073–2093' in page.locator('#paper-60').inner_text()
