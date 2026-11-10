@@ -1,5 +1,11 @@
 /* Shared design tokens, navigation and page components. Page-specific styles are scoped separately. */
 :root {
+  /* 03 Warm Contrast: MCS hero palette. */
+  --mcs-m: #59D4F2;
+  --mcs-c: #B9A1FF;
+  --mcs-s: #FFBE7A;
+  --mcs-white: #FFFFFF;
+  --mcs-navy: #071B35;
   --navy: #081b35;
   --blue: #126eaf;
   --cyan: #3fbee5;
@@ -50,9 +56,9 @@ section.block { padding: 76px 0; }
 .hero h1 { font-size: clamp(2.65rem,4.35vw,4.35rem); max-width: 720px; line-height: 1.15; letter-spacing: -.037em; overflow-wrap: normal; word-break: normal; margin: 20px 0; color: #fff; }
 .hero h1 .hero-line { display: block; white-space: nowrap; }
 .initial { font-weight: 800; text-shadow: 0 1px 13px rgba(0,0,0,.18); }
-.hero h1 .initial-m { color: #61daf2; }
-.hero h1 .initial-c { color: #a9c5ff; }
-.hero h1 .initial-s { color: #f0be79; }
+.hero h1 .initial-m { color: var(--mcs-m); }
+.hero h1 .initial-c { color: var(--mcs-c); }
+.hero h1 .initial-s { color: var(--mcs-s); }
 .hero p { font-size: clamp(1.1rem,1.7vw,1.42rem); max-width: 560px; color: #d2e5f5; }
 .section-heading { font-size: clamp(2rem,3vw,2.7rem); margin: 0 0 12px; color: var(--navy); letter-spacing: -.035em; }
 .intro { max-width: 840px; color: var(--muted); font-size: 1.08rem; margin: 0 0 37px; }
