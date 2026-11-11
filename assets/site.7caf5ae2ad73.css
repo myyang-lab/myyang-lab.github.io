@@ -192,7 +192,10 @@ p { margin: 0 0 15px; }
 /* Shared header/footer: use one breakpoint for hiding, opening and positioning the menu. */
 .nav { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.96); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
 .nav-inner { max-width: 1320px; margin: auto; padding: 17px 28px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-.logo { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; flex-shrink: 0; gap: 2px; line-height: 1.12; min-width: 198px; max-width: 255px; white-space: normal; font-weight: 800; letter-spacing: -.015em; font-size: 1.13rem; color: var(--navy); }
+.logo { display: flex; flex-direction: row; align-items: center; justify-content: flex-start; flex-shrink: 0; gap: 12px; line-height: 1.12; min-width: 198px; max-width: 255px; white-space: normal; font-weight: 800; letter-spacing: -.015em; font-size: 1.13rem; color: var(--navy); }
+/* Frame removes only the uploaded logo’s surrounding white space. */
+.brand-mark { position: relative; display: block; width: 80px; height: 50px; overflow: hidden; flex: none; }
+.brand-mark img { position: absolute; width: 128px; height: auto; max-width: none; left: 50%; top: 50%; transform: translate(-50%,-50%); }
 .brand-name { display: flex; flex-direction: column; gap: 3px; letter-spacing: -.02em; }
 .logo .brand-primary { display: block; font-size: 1.035rem; line-height: 1.2; white-space: nowrap; font-weight: 800; letter-spacing: -.028em; color: #0a2341; }
 .logo .brand-secondary { display: block; font-size: 1.035rem; line-height: 1.2; white-space: nowrap; font-weight: 750; letter-spacing: -.012em; color: #234d70; }
@@ -323,6 +326,9 @@ section.block { padding: 76px 0; }
 }
 @media (max-width: 650px) {
   .nav-inner { padding: 15px 20px; }
+  .logo { gap: 9px; }
+  .brand-mark { width: 64px; height: 40px; }
+  .brand-mark img { width: 104px; }
   .logo .brand-primary, .logo .brand-secondary { font-size: .88rem; }
   .contact-grid, .research-layout, .photo-grid { grid-template-columns: 1fr; }
   .research-section:nth-child(even) .research-copy, .research-section:nth-child(even) .research-art { order: initial; }
